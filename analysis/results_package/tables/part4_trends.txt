@@ -1,0 +1,19 @@
+Amplitude de Masking Effectiveness entre bandas, por topologia (pp = pontos percentuais): 1 nó(s)=1.3pp; 2 nó(s)=33.4pp; 3 nó(s)=34.2pp; 4 nó(s)=38.2pp
+Maior IC95 individual de ME (pp) por topologia, para referencia de ruido de medicao: 1 nó(s)=3.66pp; 2 nó(s)=6.61pp; 3 nó(s)=0.76pp; 4 nó(s)=2.57pp
+Primeira topologia em que a amplitude de ME entre bandas excede o maior IC95 individual observado naquela topologia: 2 nó(s) (amplitude=33.4pp > IC95=6.61pp)
+Variacao da amplitude de ME (pp) de uma topologia para a seguinte: 1->2 nós: +32.0pp; 2->3 nós: +0.8pp; 3->4 nós: +4.0pp
+Maior crescimento de amplitude ocorre no passo 1->2 nós (+32.0pp)
+[1 Gbit/s] Variacao percentual do throughput/GPU por passo de escala: 1->2: -25.2%; 2->3: -60.9%; 3->4: -9.7%
+[1 Gbit/s] Variacao absoluta de ME (pp) por passo de escala: 1->2: -39.8pp; 2->3: -16.0pp; 3->4: -2.7pp
+[10 Gbit/s] Variacao percentual do throughput/GPU por passo de escala: 1->2: +17.0%; 2->3: -49.3%; 3->4: +2.8%
+[10 Gbit/s] Variacao absoluta de ME (pp) por passo de escala: 1->2: -5.4pp; 2->3: -16.1pp; 3->4: +1.5pp
+[25 Gbit/s] Variacao percentual do throughput/GPU por passo de escala: 1->2: +12.1%; 2->3: -46.3%; 3->4: +1.3%
+[25 Gbit/s] Variacao absoluta de ME (pp) por passo de escala: 1->2: -10.6pp; 2->3: -11.4pp; 3->4: +1.2pp
+R^2 do ajuste linear (throughput/GPU vs numero de nos) por banda: 10 Gbit/s=0.615; 1 Gbit/s=0.916; 25 Gbit/s=0.666
+R^2 do ajuste linear (ME vs numero de nos) por banda: 10 Gbit/s=0.849; 1 Gbit/s=0.840; 25 Gbit/s=0.860
+Razao (ganho 10->25) / (ganho 1->10), throughput, por topologia: 1 nó(s)=-45.2%; 2 nó(s)=-8.4%; 3 nó(s)=0.7%; 4 nó(s)=-0.5%
+Razao (ganho 10->25) / (ganho 1->10), Masking Effectiveness, por topologia: 1 nó(s)=-138.3%; 2 nó(s)=-6.6%; 3 nó(s)=1.2%; 4 nó(s)=0.7%
+Diferenca de ME entre 10gbit e 25gbit (pp), por topologia, e se fica dentro do IC95: 1 nó(s): +1.35pp (IC95max=3.66pp, dentro=TRUE); 2 nó(s): -3.85pp (IC95max=6.61pp, dentro=TRUE); 3 nó(s): +0.85pp (IC95max=0.76pp, dentro=FALSE); 4 nó(s): +0.61pp (IC95max=2.57pp, dentro=TRUE)
+Inversao de ordem (throughput 10gbit > 25gbit, valor medio) observada em: 1 nó(s) (10gbit=3325.8 MSamples/s > 25gbit=3298.5 MSamples/s, diff=27.3); 2 nó(s) (10gbit=7783.2 MSamples/s > 25gbit=7398.0 MSamples/s, diff=385.2); 4 nó(s) (10gbit=8107.0 MSamples/s > 25gbit=8054.0 MSamples/s, diff=53.0)
+Combinacoes (nos, banda) com Masking Effectiveness medio < 0.5: 2 nó(s)/1 Gbit/s (ME=0.449); 3 nó(s)/1 Gbit/s (ME=0.289); 4 nó(s)/1 Gbit/s (ME=0.262)
+Repeticoes com |z-score| > 2 dentro do proprio experiment_id (n=5, portanto criterio exploratorio, nao um teste formal): nenhuma detectada
