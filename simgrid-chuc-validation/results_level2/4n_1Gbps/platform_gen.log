@@ -1,0 +1,11 @@
+Platform configuration (shared-NIC model, XML backend):
+  num_nodes: 4
+  ranks_per_node: 4
+  net_bw (shared, per node): 1Gbps
+  net_lat: 22.7us
+  intra_bw (per rank, within node): 200GBps
+  intra_lat: 0.1us
+  hostfile_path: /home/aandrade/ic/io-research/distributed-cube-average/simgrid-chuc-validation/results_level2/4n_1Gbps/hostfile.txt
+  xml_out: /home/aandrade/ic/io-research/distributed-cube-average/simgrid-chuc-validation/results_level2/4n_1Gbps/platform_shared_nic.xml
+[Generator] Wrote /home/aandrade/ic/io-research/distributed-cube-average/simgrid-chuc-validation/results_level2/4n_1Gbps/platform_shared_nic.xml and /home/aandrade/ic/io-research/distributed-cube-average/simgrid-chuc-validation/results_level2/4n_1Gbps/hostfile.txt
+[Generator] Generated 16 hosts (4 nodes x 4 ranks).

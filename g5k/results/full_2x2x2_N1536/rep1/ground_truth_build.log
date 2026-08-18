@@ -1,0 +1,37 @@
+warning: Git tree '/home/aandrade/ic/io-research/distributed-cube-average' is dirty
+mpicc -c src/boundary.c -o bin_openmp_gt/obj/boundary.o -Iinclude -Wall -O3 -g -fopenmp
+src/boundary.c: In function ‘randomVelocityBoundaryPartition’:
+src/boundary.c:62:31: warning: variable ‘ivelx’ set but not used [-Wunused-but-set-variable]
+   62 |             int ivelz, ively, ivelx;
+      |                               ^~~~~
+src/boundary.c:62:24: warning: variable ‘ively’ set but not used [-Wunused-but-set-variable]
+   62 |             int ivelz, ively, ivelx;
+      |                        ^~~~~
+src/boundary.c:62:17: warning: variable ‘ivelz’ set but not used [-Wunused-but-set-variable]
+   62 |             int ivelz, ively, ivelx;
+      |                 ^~~~~
+mpicc -c src/calculate_source.c -o bin_openmp_gt/obj/calculate_source.o -Iinclude -Wall -O3 -g -fopenmp
+mpicc -c src/coordinator.c -o bin_openmp_gt/obj/coordinator.o -Iinclude -Wall -O3 -g -fopenmp
+mpicc -c src/io.c -o bin_openmp_gt/obj/io.o -Iinclude -Wall -O3 -g -fopenmp
+mpicc -c src/log.c -o bin_openmp_gt/obj/log.o -Iinclude -Wall -O3 -g -fopenmp
+mpicc -c src/main.c -o bin_openmp_gt/obj/main.o -Iinclude -Wall -O3 -g -fopenmp
+mpicc -c src/precomp.c -o bin_openmp_gt/obj/precomp.o -Iinclude -Wall -O3 -g -fopenmp
+mpicc -c src/setup.c -o bin_openmp_gt/obj/setup.o -Iinclude -Wall -O3 -g -fopenmp
+mpicc -c src/worker.c -o bin_openmp_gt/obj/worker.o -Iinclude -Wall -O3 -g -fopenmp
+src/worker.c: In function ‘dc_worker_process’:
+src/worker.c:464:10: warning: unused variable ‘average’ [-Wunused-variable]
+  464 |   double average = -1;
+      |          ^~~~~~~
+src/worker.c:463:7: warning: unused variable ‘stopped’ [-Wunused-variable]
+  463 |   int stopped = 0;
+      |       ^~~~~~~
+src/worker.c:462:7: warning: unused variable ‘count’ [-Wunused-variable]
+  462 |   int count = 0;
+      |       ^~~~~
+mpicc -c src/openmp_propagate.c -o bin_openmp_gt/obj/openmp_propagate.o -Iinclude -Wall -O3 -g -fopenmp
+mpicc -c src/device_data.c -o bin_openmp_gt/obj/device_data.o -Iinclude -Wall -O3 -g -fopenmp
+src/device_data.c: In function ‘dc_device_data_init’:
+src/device_data.c:20:10: warning: unused variable ‘total_size_bytes’ [-Wunused-variable]
+   20 |   size_t total_size_bytes = total_size * sizeof(float);
+      |          ^~~~~~~~~~~~~~~~
+mpicc -o bin_openmp_gt/dc bin_openmp_gt/obj/boundary.o bin_openmp_gt/obj/calculate_source.o bin_openmp_gt/obj/coordinator.o bin_openmp_gt/obj/io.o bin_openmp_gt/obj/log.o bin_openmp_gt/obj/main.o bin_openmp_gt/obj/precomp.o bin_openmp_gt/obj/setup.o bin_openmp_gt/obj/worker.o bin_openmp_gt/obj/openmp_propagate.o bin_openmp_gt/obj/device_data.o -lm -fopenmp

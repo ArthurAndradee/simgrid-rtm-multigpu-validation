@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite the paper below."
+title: "Experimental Validation of SimGrid Predictions for RTM Applications in Multi-Node Multi-GPU Environments"
+type: software
+authors:
+  - given-names: Arthur
+    family-names: Andrade da Silva
+    affiliation: "Institute of Informatics, UFRGS"
+  - given-names: Vinícius Daniel
+    family-names: Spadotto
+    affiliation: "Institute of Informatics, UFRGS"
+  - given-names: Cristiano Alex
+    family-names: Künas
+    affiliation: "Institute of Informatics, UFRGS"
+  - given-names: Lucas Mello
+    family-names: Schnorr
+    affiliation: "Institute of Informatics, UFRGS"
+  - given-names: Phillipe Olivier Alexandre
+    family-names: Navaux
+    affiliation: "Institute of Informatics, UFRGS"
+abstract: >
+  Experimental artifact (source code, orchestration scripts, aggregated
+  results, and analysis pipeline) for a study that determines the validity
+  envelope of a SimGrid/SMPI model of Fletcher (an anisotropic reverse time
+  migration application) calibrated on single-GPU-per-node hardware, by
+  running Fletcher's CUDA backend on Grid'5000's chuc cluster (four A100
+  GPUs per node) across one to four nodes and bandwidths of 1, 10, and 25
+  Gbit/s, and confronting the measurements against the simulated
+  predictions.
+license: MIT
+repository-code: "https://github.com/ArthurAndradee/simgrid-rtm-multigpu-validation"
+keywords:
+  - SimGrid
+  - SMPI
+  - simulation validation
+  - reverse time migration
+  - RTM
+  - multi-GPU
+  - MPI
+  - Grid5000
+  - HPC
+  - performance modeling

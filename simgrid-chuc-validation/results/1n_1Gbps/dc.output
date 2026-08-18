@@ -1,0 +1,84 @@
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/privatization' to 'ON'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/np' to '4'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/hostfile' to '/home/aandrade/ic/io-research/distributed-cube-average/simgrid-chuc-validation/results/1n_1Gbps/hostfile.txt'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing' to 'yes'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing/filename' to 'smpi_simgrid.trace'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing/smpi' to 'yes'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'precision/timing' to '1e-9'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'network/model' to 'SMPI'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'contexts/factory' to 'thread'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/display-timing' to 'yes'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'precision/timing' to '1e-9'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing/precision' to '9'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/shared-malloc' to 'global'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/host-speed' to '1'
+[0.000000] ../src/xbt/xbt_parse_units.cpp:71: [parse/WARNING] Deprecated unit-less value '1' for option smpi/host-speed. Append 'f' or 'flops' to your speed to get flop per second
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/os' to '0:4.17e-07:9.3e-08;2:1.2688358242159313e-06:5.509165162627468e-11;846:1.2427927374751976e-06:7.629724927795766e-11;1182:1.01878039474522e-06:2.2976714190789488e-10;6687:7.212526152845653e-07:2.3548673558712826e-10;65480:0.0:0.0'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/or' to '0:1.074e-06:6.000000000000027e-09;2:1.0473771622457872e-06:1.5567156532620197e-10;846:1.2421788110402576e-06:7.174648137343064e-43;1182:1.6995035871937564e-06:1.348689114201127e-10;6687:1.758151339164401e-06:1.1446056239417835e-10;65480:0.0:0.0'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/ois' to '0:4.99e-07:6.2e-08;2:5.71513825856767e-07:3.681266485442063e-11;846:1.3753277297356838e-07:3.538717583470924e-10;1182:2.0886700989740583e-07:1.9666759173075344e-10;6687:2.938735877055719e-39:1.105170449896893e-10;65480:5.548287028763466e-07:1.5407086056396026e-13'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/bw-factor' to '0:1.0;2:0.4510053758462671;846:0.5091684623185814;1182:0.948984644166369;6687:0.9193943188688236;65480:0.9412414252627215'
+[0.000000] [xbt_cfg/INFO] Option smpi/bw-factor has been renamed to network/bandwidth-factor. Consider switching.
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/lat-factor' to '0:0.837740263193759;2:0.790246085987436;846:1.0647374762712742;1182:1.4653793019194907;6687:1.394904217619273;65480:4.25253968678777'
+[0.000000] [xbt_cfg/INFO] Option smpi/lat-factor has been renamed to network/latency-factor. Consider switching.
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/iprobe' to '1.6269591164444444e-07'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/test' to '1.4119688221333333e-07'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/async-small-thresh' to '65480'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/send-is-detached-thresh' to '65480'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing/filename' to 'dc.trace'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/tmpdir' to '/tmp/nix-shell.d9LeUK'
+Platform configuration (shared-NIC model):
+  num_nodes: 1
+  ranks_per_node: 4
+  net_bw (shared, per node): 1Gbps
+  net_lat: 22.7us
+  intra_bw (per rank, within node): 200GBps
+  intra_lat: 0.1us
+  hostfile_path: /home/aandrade/ic/io-research/distributed-cube-average/simgrid-chuc-validation/results/1n_1Gbps/hostfile.txt
+[S4U Plugin] Loading shared-NIC platform: 1 node(s) x 4 rank(s).
+[INFO] chuc-7.lille.grid5000.fr - Worker 1: Awaiting partition info from coordinator...
+[INFO] chuc-7.lille.grid5000.fr - Worker 2: Awaiting partition info from coordinator...
+[INFO] chuc-7.lille.grid5000.fr - Worker 3: Awaiting partition info from coordinator...
+[INFO] chuc-7.lille.grid5000.fr - Coordinator: Distributing partition info to workers...
+[INFO] chuc-7.lille.grid5000.fr - Coordinator: Distributing partition info to 4 workers...
+[INFO] chuc-7.lille.grid5000.fr - Coordinator: Global sizes: 1344 x 1344 x 1344
+[INFO] chuc-7.lille.grid5000.fr - Coordinator: Partition sizes: 668 x 668 x 1336
+[INFO] chuc-7.lille.grid5000.fr - Coordinator: Worker 2 will handle source at local index 307542148
+[INFO] chuc-7.lille.grid5000.fr - Coordinator: Sent partition info to worker 2
+[INFO] chuc-7.lille.grid5000.fr - Coordinator: Worker 1 will handle source at local index 307091248
+[INFO] chuc-7.lille.grid5000.fr - Worker 2: Received partition info: local 676x676x1344, global 1344x1344x1344
+[INFO] chuc-7.lille.grid5000.fr - Worker 2: Local initialization complete
+[INFO] chuc-7.lille.grid5000.fr - Worker 2: Local initialization complete.
+[INFO] chuc-7.lille.grid5000.fr - Worker 2: Starting worker process...
+[INFO] chuc-7.lille.grid5000.fr - Coordinator: Sent partition info to worker 1
+[INFO] chuc-7.lille.grid5000.fr - Coordinator: Worker 3 will handle source at local index 307090580
+[INFO] chuc-7.lille.grid5000.fr - Worker 1: Received partition info: local 676x676x1344, global 1344x1344x1344
+[INFO] chuc-7.lille.grid5000.fr - Worker 1: Local initialization complete
+[INFO] chuc-7.lille.grid5000.fr - Worker 1: Local initialization complete.
+[INFO] chuc-7.lille.grid5000.fr - Worker 1: Starting worker process...
+[INFO] chuc-7.lille.grid5000.fr - Coordinator: Sent partition info to worker 3
+[INFO] chuc-7.lille.grid5000.fr - Coordinator: Coordinator initialized locally with sizes 676 x 676 x 1344
+[INFO] chuc-7.lille.grid5000.fr - Coordinator: Starting worker process...
+[INFO] chuc-7.lille.grid5000.fr - Worker 3: Received partition info: local 676x676x1344, global 1344x1344x1344
+[INFO] chuc-7.lille.grid5000.fr - Worker 3: Local initialization complete
+[INFO] chuc-7.lille.grid5000.fr - Worker 3: Local initialization complete.
+[INFO] chuc-7.lille.grid5000.fr - Worker 3: Starting worker process...
+[INFO] chuc-7.lille.grid5000.fr - Coordinator: Starting 100 iterations with sizes 676 676 1344
+CUDA source using device (0) NVIDIA A100-SXM4-40GB with compute capability 8.0
+[INFO] chuc-7.lille.grid5000.fr - Worker 3: Starting 100 iterations with sizes 676 676 1344
+CUDA source using device (3) NVIDIA A100-SXM4-40GB with compute capability 8.0
+[INFO] chuc-7.lille.grid5000.fr - Worker 2: Starting 100 iterations with sizes 676 676 1344
+CUDA source using device (2) NVIDIA A100-SXM4-40GB with compute capability 8.0
+[INFO] chuc-7.lille.grid5000.fr - Worker 1: Starting 100 iterations with sizes 676 676 1344
+CUDA source using device (1) NVIDIA A100-SXM4-40GB with compute capability 8.0
+rank,total_time,msamples_per_s
+0,75.621728,807.626993
+*,75.621728,3153.354374
+3,47.330995,1284.222482
+2,39.657696,1593.352549
+1,39.271463,1566.089280
+[108.524366] [smpi_utils/INFO] Simulated time: 108.524 seconds. 
+
+The simulation took 378.987 seconds (after parsing and platform setup)
+375.91 seconds were actual computation of the application
+[108.524366] [smpi_utils/INFO] More than 75% of the time was spent inside the application code.
+You may want to use sampling functions or trace replay to reduce this.

@@ -1,0 +1,81 @@
+[INFO] chuc-4.lille.grid5000.fr - Worker 3: Awaiting partition info from coordinator...
+[INFO] chuc-4.lille.grid5000.fr - Worker 1: Awaiting partition info from coordinator...
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Distributing partition info to workers...
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Distributing partition info to 8 workers...
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Global sizes: 1664 x 1664 x 1664
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Partition sizes: 828 x 828 x 828
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Worker 4 will handle source at local index 582177028
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Sent partition info to worker 4
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Worker 2 will handle source at local index 581485648
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Sent partition info to worker 2
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Worker 6 will handle source at local index 581484820
+[INFO] chuc-4.lille.grid5000.fr - Worker 2: Awaiting partition info from coordinator...
+[INFO] chuc-4.lille.grid5000.fr - Worker 2: Received partition info: local 836x836x836, global 1664x1664x1664
+[INFO] chuc-7.lille.grid5000.fr - Worker 7: Awaiting partition info from coordinator...
+[INFO] chuc-7.lille.grid5000.fr - Worker 5: Awaiting partition info from coordinator...
+[INFO] chuc-7.lille.grid5000.fr - Worker 4: Awaiting partition info from coordinator...
+[INFO] chuc-7.lille.grid5000.fr - Worker 4: Received partition info: local 836x836x836, global 1664x1664x1664
+[INFO] chuc-7.lille.grid5000.fr - Worker 6: Awaiting partition info from coordinator...
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Sent partition info to worker 6
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Worker 1 will handle source at local index 3491968
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Sent partition info to worker 1
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Worker 5 will handle source at local index 3491140
+[INFO] chuc-4.lille.grid5000.fr - Worker 1: Received partition info: local 836x836x836, global 1664x1664x1664
+[INFO] chuc-7.lille.grid5000.fr - Worker 6: Received partition info: local 836x836x836, global 1664x1664x1664
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Sent partition info to worker 5
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Worker 3 will handle source at local index 2799760
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Sent partition info to worker 3
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Worker 7 will handle source at local index 2798932
+[INFO] chuc-4.lille.grid5000.fr - Worker 3: Received partition info: local 836x836x836, global 1664x1664x1664
+[INFO] chuc-7.lille.grid5000.fr - Worker 5: Received partition info: local 836x836x836, global 1664x1664x1664
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Sent partition info to worker 7
+[INFO] chuc-7.lille.grid5000.fr - Worker 7: Received partition info: local 836x836x836, global 1664x1664x1664
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Coordinator initialized locally with sizes 836 x 836 x 836
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Starting worker process...
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Starting 100 iterations with sizes 836 836 836
+CUDA source using device (0) NVIDIA A100-SXM4-40GB with compute capability 8.0
+[INFO] chuc-4.lille.grid5000.fr - Worker 3: Local initialization complete
+[INFO] chuc-4.lille.grid5000.fr - Worker 3: Local initialization complete.
+[INFO] chuc-4.lille.grid5000.fr - Worker 3: Starting worker process...
+[INFO] chuc-4.lille.grid5000.fr - Worker 3: Starting 100 iterations with sizes 836 836 836
+[INFO] chuc-4.lille.grid5000.fr - Worker 2: Local initialization complete
+[INFO] chuc-4.lille.grid5000.fr - Worker 2: Local initialization complete.
+[INFO] chuc-4.lille.grid5000.fr - Worker 2: Starting worker process...
+[INFO] chuc-4.lille.grid5000.fr - Worker 2: Starting 100 iterations with sizes 836 836 836
+[INFO] chuc-4.lille.grid5000.fr - Worker 1: Local initialization complete
+[INFO] chuc-4.lille.grid5000.fr - Worker 1: Local initialization complete.
+[INFO] chuc-4.lille.grid5000.fr - Worker 1: Starting worker process...
+[INFO] chuc-4.lille.grid5000.fr - Worker 1: Starting 100 iterations with sizes 836 836 836
+CUDA source using device (3) NVIDIA A100-SXM4-40GB with compute capability 8.0
+CUDA source using device (2) NVIDIA A100-SXM4-40GB with compute capability 8.0
+CUDA source using device (1) NVIDIA A100-SXM4-40GB with compute capability 8.0
+[INFO] chuc-7.lille.grid5000.fr - Worker 5: Local initialization complete
+[INFO] chuc-7.lille.grid5000.fr - Worker 5: Local initialization complete.
+[INFO] chuc-7.lille.grid5000.fr - Worker 5: Starting worker process...
+[INFO] chuc-7.lille.grid5000.fr - Worker 5: Starting 100 iterations with sizes 836 836 836
+CUDA source using device (1) NVIDIA A100-SXM4-40GB with compute capability 8.0
+[INFO] chuc-7.lille.grid5000.fr - Worker 7: Local initialization complete
+[INFO] chuc-7.lille.grid5000.fr - Worker 7: Local initialization complete.
+[INFO] chuc-7.lille.grid5000.fr - Worker 7: Starting worker process...
+[INFO] chuc-7.lille.grid5000.fr - Worker 7: Starting 100 iterations with sizes 836 836 836
+CUDA source using device (3) NVIDIA A100-SXM4-40GB with compute capability 8.0
+[INFO] chuc-7.lille.grid5000.fr - Worker 4: Local initialization complete
+[INFO] chuc-7.lille.grid5000.fr - Worker 4: Local initialization complete.
+[INFO] chuc-7.lille.grid5000.fr - Worker 4: Starting worker process...
+[INFO] chuc-7.lille.grid5000.fr - Worker 4: Starting 100 iterations with sizes 836 836 836
+[INFO] chuc-7.lille.grid5000.fr - Worker 6: Local initialization complete
+[INFO] chuc-7.lille.grid5000.fr - Worker 6: Local initialization complete.
+[INFO] chuc-7.lille.grid5000.fr - Worker 6: Starting worker process...
+[INFO] chuc-7.lille.grid5000.fr - Worker 6: Starting 100 iterations with sizes 836 836 836
+CUDA source using device (0) NVIDIA A100-SXM4-40GB with compute capability 8.0
+CUDA source using device (2) NVIDIA A100-SXM4-40GB with compute capability 8.0
+rank,total_time,msamples_per_s
+0,79.065764,738.072300
+*,79.065764,5743.710262
+2,51.637163,1164.522161
+1,51.678527,1159.590655
+3,51.748376,1161.234546
+4,45.614218,1299.685256
+5,47.979938,1233.858661
+7,46.251409,1258.383110
+6,45.503059,1300.543923

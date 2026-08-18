@@ -1,0 +1,11 @@
+# REAL run (not simulated) -- reduced N=1800 reference for Level 1's
+# hardware-mismatch fix (see LEVEL2_FINDINGS.md sec 6.5 / REDUCED_N_RUNBOOK.md)
+label: 3n_10gbit
+nodes: 3
+total_hosts: 12
+anchor_N: 1800 (reduced -- compare ONLY against results_reduced_n/, not Table 3)
+cuda_size: 1788
+bandwidth: 10gbit
+net_lat: 22.7us
+hostfile: chuc-1.lille.grid5000.fr chuc-2.lille.grid5000.fr chuc-8.lille.grid5000.fr
+timestamp: 2026-08-14T14:59:48+02:00

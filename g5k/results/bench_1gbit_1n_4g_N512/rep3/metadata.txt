@@ -1,0 +1,48 @@
+# Metadata do experimento — gerado automaticamente
+timestamp: 2026-07-17T17:49:38+02:00
+experiment_id: 1gbit_1n_4g_N512
+repeticao: 3 / 5
+
+## Parâmetros do experimento (do CSV, não recalculados)
+banda_rede: 1gbit
+num_nos_csv: 1
+num_gpus_csv: 4
+topologia_mpi_csv: 1x2x2
+tamanho_global_n: 512
+vram_gb_por_gpu_csv: 1.55
+
+## Conversão para CLI (STENCIL=4, ABSORPTION=2)
+size_x=size_y=size_z: 500
+formula: size_cli = Tamanho_Global_N - 2*STENCIL - 2*ABSORPTION
+
+## Execução real
+np: 4
+native_mode: 0
+shaping_atual: 1gbit 
+hostfile:
+  chuc-3.lille.grid5000.fr slots=4
+map_by: slot
+bind_to: numa
+pml: ucx
+mca_pml_ucx_tls: tcp,self,sm (validated fix, see lib/run.sh header)
+return_code: 0
+elapsed_wallclock_seconds: 13
+
+## Ambiente / hardware
+node: chuc-3.lille.grid5000.fr
+  chuc-3.lille.grid5000.fr
+  GPU 0: NVIDIA A100-SXM4-40GB (UUID: GPU-64fe5dfd-0794-1389-45d2-206cbbb0d941)
+  GPU 1: NVIDIA A100-SXM4-40GB (UUID: GPU-87bee20b-66b8-16ab-c94b-a793b7f26124)
+  GPU 2: NVIDIA A100-SXM4-40GB (UUID: GPU-16994608-33fb-3c85-ecfb-4e87ed469c4a)
+  GPU 3: NVIDIA A100-SXM4-40GB (UUID: GPU-b588e206-0c9c-9d11-b0d0-953f37e909cb)
+  0, 0 %, 0 MiB, 40960 MiB
+  1, 6 %, 0 MiB, 40960 MiB
+  2, 0 %, 0 MiB, 40960 MiB
+  3, 0 %, 0 MiB, 40960 MiB
+  tc: qdisc tbf 1: root refcnt 505 rate 1Gbit burst 250000b lat 50ms 
+
+## Reprodutibilidade
+git_commit: 4bd74bb7f6ec5fc1829db89f1af373711a0d9f3c
+scripts_sha256_combined: 4db325cfd55f6b4e2582a8be5c9353563e0c4d60f14069441ed431f7ba9bcbb6
+dc_binary_sha256: 20ed4ef9f81e2b5ccc2c72901d8222ea1e12134d702ea93989379fa40c5a8c70
+versions_file: /home/aandrade/ic/io-research/distributed-cube-average/g5k/logs/versions.txt (capturado uma vez por campanha, ver esse arquivo)

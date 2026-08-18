@@ -1,0 +1,18 @@
+# Simulated run — Level 2 (shared-NIC chuc platform, original poti network
+# calibration, real A100 compute constant substituted for online sampling)
+label: 1n_1Gbps
+nodes: 1
+ranks_per_node: 4
+total_hosts: 4
+anchor_N: 1344
+cuda_size: 1332
+bandwidth: 1Gbps
+net_lat: 22.7us (reused unchanged from original poti calibration)
+platform: simgrid-chuc-validation/platform_shared_nic.cpp
+smpi_calibration: copied verbatim from nix/scripts.nix runSimgridPlatformCuda (Cornebize methodology, poti/1Gbit/s)
+compute_source: analysis/level2_compute_constants.csv (real A100, extracted from g5k/results/bench_25gbit_1n_*, 1-node topology, 5 reps, iteration>1)
+boundaries_s_per_rank: 0.09575879405050486,0.06782465411717169,0.08952276198989866,0.03596200945050544
+interior_s_per_rank: 0.18106693450505065,0.1803480519010102,0.18089343370505054,0.1801721293575758
+bookkeeping_s_per_rank: 0.012351317353535302,0.011251705830303143,0.01269027488080805,0.010842055042424192
+iterations: 100
+timestamp: 2026-08-13T05:27:01+02:00

@@ -1,0 +1,60 @@
+# Metadata do experimento — gerado automaticamente
+timestamp: 2026-07-29T17:28:34+02:00
+experiment_id: 1gbit_2n_8g_N1600
+repeticao: 4 / 5
+
+## Parâmetros do experimento (do CSV, não recalculados)
+banda_rede: 1gbit
+num_nos_csv: 2
+num_gpus_csv: 8
+topologia_mpi_csv: 2x2x2
+tamanho_global_n: 1600
+vram_gb_por_gpu_csv: 23.23
+
+## Conversão para CLI (STENCIL=4, ABSORPTION=2)
+size_x=size_y=size_z: 1588
+formula: size_cli = Tamanho_Global_N - 2*STENCIL - 2*ABSORPTION
+
+## Execução real
+np: 8
+native_mode: 0
+shaping_atual: 1gbit 
+hostfile:
+  chuc-2.lille.grid5000.fr slots=4
+  chuc-6.lille.grid5000.fr slots=4
+map_by: slot
+bind_to: numa
+pml: ucx
+mca_pml_ucx_tls: tcp,self,sm (validated fix, see lib/run.sh header)
+return_code: 0
+elapsed_wallclock_seconds: 148
+
+## Ambiente / hardware
+node: chuc-2.lille.grid5000.fr
+  chuc-2.lille.grid5000.fr
+  GPU 0: NVIDIA A100-SXM4-40GB (UUID: GPU-f2bbaffd-866f-df95-d844-2a34804ff48e)
+  GPU 1: NVIDIA A100-SXM4-40GB (UUID: GPU-86c1e5f8-0820-3520-508e-383a6311fad3)
+  GPU 2: NVIDIA A100-SXM4-40GB (UUID: GPU-5f0516f0-d76f-50e9-8c71-b04631298c7f)
+  GPU 3: NVIDIA A100-SXM4-40GB (UUID: GPU-e0a9c4c0-f728-b25e-0215-abd3e92f8c31)
+  0, 0 %, 0 MiB, 40960 MiB
+  1, 0 %, 0 MiB, 40960 MiB
+  2, 0 %, 0 MiB, 40960 MiB
+  3, 0 %, 0 MiB, 40960 MiB
+  tc: qdisc tbf 1: root refcnt 505 rate 1Gbit burst 250000b lat 50ms 
+node: chuc-6.lille.grid5000.fr
+  chuc-6.lille.grid5000.fr
+  GPU 0: NVIDIA A100-SXM4-40GB (UUID: GPU-b3b769fd-4d31-b356-e9f2-f2fb8d4b2819)
+  GPU 1: NVIDIA A100-SXM4-40GB (UUID: GPU-3b21b7b9-0de2-837d-b323-9f43a0a4f70c)
+  GPU 2: NVIDIA A100-SXM4-40GB (UUID: GPU-cf424d23-f92b-4799-e0f1-cc41c3e6937f)
+  GPU 3: NVIDIA A100-SXM4-40GB (UUID: GPU-0b89b1ea-36b3-55b4-52a5-793eaafe1593)
+  0, 0 %, 0 MiB, 40960 MiB
+  1, 0 %, 0 MiB, 40960 MiB
+  2, 0 %, 0 MiB, 40960 MiB
+  3, 0 %, 0 MiB, 40960 MiB
+  tc: qdisc tbf 1: root refcnt 505 rate 1Gbit burst 250000b lat 50ms 
+
+## Reprodutibilidade
+git_commit: a17fcf2a6637e88d3ece88a4409c5d1e78e74e38
+scripts_sha256_combined: efe3b988fff9b42081a7f4da0b98369d11e23d87759e08f7f52c649b5f92c608
+dc_binary_sha256: d24cd60d4191651d12830f653457e0ef11542a7136b59c3e27a620795c994512
+versions_file: /home/aandrade/ic/io-research/distributed-cube-average/g5k/logs/versions.txt (capturado uma vez por campanha, ver esse arquivo)

@@ -1,0 +1,25 @@
+warning: Git tree '/home/aandrade/ic/io-research/distributed-cube-average' is dirty
+[INFO] chuc-1.lille.grid5000.fr - Coordinator: Distributing partition info to workers...
+[INFO] chuc-1.lille.grid5000.fr - Coordinator: Distributing partition info to 1 workers...
+[INFO] chuc-1.lille.grid5000.fr - Coordinator: Global sizes: 1536 x 1536 x 1536
+[INFO] chuc-1.lille.grid5000.fr - Coordinator: Partition sizes: 1528 x 1528 x 1528
+[INFO] chuc-1.lille.grid5000.fr - Coordinator: Coordinator initialized locally with sizes 1536 x 1536 x 1536
+[INFO] chuc-1.lille.grid5000.fr - Coordinator: Starting worker process...
+[INFO] chuc-1.lille.grid5000.fr - Coordinator: Starting 100 iterations with sizes 1536 1536 1536
+[chuc-1:38003:0:38110] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x7fba67e00020)
+==== backtrace (tid:  38110) ====
+ 0 0x00000000000419c0 __GI___sigaction()  ???:0
+ 1 0x0000000000008854 sample_compute()  /home/aandrade/ic/io-research/distributed-cube-average/include/sample_compute.h:174
+ 2 0x0000000000008854 dc_propagate._omp_fn.0()  /home/aandrade/ic/io-research/distributed-cube-average/src/openmp_propagate.c:19
+ 3 0x00000000000d1156 __kmp_GOMP_microtask_wrapper()  ???:0
+ 4 0x00000000000f2389 __kmp_invoke_microtask()  ???:0
+ 5 0x00000000000467ef __kmp_invoke_task_func()  ???:0
+ 6 0x000000000004ada7 __kmp_launch_thread()  ???:0
+ 7 0x00000000000cb51b __kmp_launch_worker()  ???:0
+ 8 0x000000000009a97a start_thread()  ???:0
+ 9 0x0000000000122d2c __clone3()  ???:0
+=================================
+--------------------------------------------------------------------------
+prterun noticed that process rank 0 with PID 38003 on node chuc-1 exited on
+signal 11 (Segmentation fault).
+--------------------------------------------------------------------------

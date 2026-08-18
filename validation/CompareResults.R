@@ -1,0 +1,55 @@
+args <- commandArgs(trailingOnly = TRUE)
+tolerance <- if (length(args) >= 1) as.numeric(args[1]) else 1e-06
+ground_truth_path <- if (length(args) >= 2) args[2] else "validation/ground_truth.dc"
+predicted_path <- if (length(args) >= 3) args[3] else "validation/predicted.dc"
+
+read_floats <- function(file_path) {
+    if (!file.exists(file_path)) {
+        stop(paste("File not found:", file_path))
+    }
+
+    con <- file(file_path, "rb")
+    on.exit(close(con))
+
+    file_size <- file.info(file_path)$size
+    num_floats <- file_size/4
+
+    floats <- readBin(con, what = "numeric", n = num_floats, size = 4)
+
+    floats
+}
+
+# Read the float data from both files
+ground_truth_floats <- read_floats(ground_truth_path)
+predicted_floats <- read_floats(predicted_path)
+
+# Compare the contents
+exit_status <- 0
+if (length(ground_truth_floats) != length(predicted_floats)) {
+    output <- "✖️ Validation error: the files have different sizes."
+    exit_status <- 2
+} else {
+    # Compute differences
+    differences <- ground_truth_floats - predicted_floats
+    abs_differences <- abs(differences)
+
+    if (all(abs_differences <= tolerance)) {
+        output <- paste0("Min: ", min(ground_truth_floats), "\n", "Max: ", max(ground_truth_floats),
+            "\n", "Standard deviation: ", sd(ground_truth_floats), "\n", "✅ Validation successful! The files are numerically similar within a tolerance of ",
+            tolerance, ".")
+    } else {
+        max_abs_diff <- max(abs_differences)
+        mean_abs_diff <- mean(abs_differences)
+        num_diffs <- sum(abs_differences > 1e-09)  # Count significant differences
+
+        output <- paste0("✖️ Validation error: the outputs differ numerically.\n",
+            "Number of significant differences: ", num_diffs, "\n", "Maximum absolute difference: ",
+            format(max_abs_diff, scientific = TRUE, digits = 4), "\n", "Mean absolute difference: ",
+            format(mean_abs_diff, scientific = TRUE, digits = 4))
+        exit_status <- 1
+    }
+}
+
+# Print the result
+cat(output, "\n")
+quit(save = "no", status = exit_status)

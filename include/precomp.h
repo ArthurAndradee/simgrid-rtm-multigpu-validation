@@ -1,0 +1,34 @@
+#pragma once
+
+#include <stddef.h>
+
+#define SIGMA 0.75
+#define MAX_SIGMA 10.0
+
+typedef struct {
+  float *ch1dxx;
+  float *ch1dyy;
+  float *ch1dzz;
+  float *ch1dxy;
+  float *ch1dyz;
+  float *ch1dxz;
+  float *v2px;
+  float *v2pz;
+  float *v2sz;
+  float *v2pn;
+} dc_precomp_vars;
+
+typedef struct {
+  float *theta;
+  float *phi;
+  float *vsv;
+  float *vpz;
+  float *epsilon;
+  float *delta;
+} dc_anisotropy_t;
+
+dc_precomp_vars dc_compute_precomp_vars(size_t sx, size_t sy, size_t sz,
+                                        dc_anisotropy_t anisotropy);
+dc_anisotropy_t dc_compute_anisotropy_vars(size_t sx, size_t sy, size_t sz);
+void dc_free_precomp_vars(dc_precomp_vars *vars);
+void dc_free_anisotropy_vars(dc_anisotropy_t *anisotropy);

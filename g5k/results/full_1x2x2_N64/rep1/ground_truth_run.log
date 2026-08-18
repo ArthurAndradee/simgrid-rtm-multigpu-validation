@@ -1,0 +1,11 @@
+warning: Git tree '/home/aandrade/ic/io-research/distributed-cube-average' is dirty
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Distributing partition info to workers...
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Distributing partition info to 1 workers...
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Global sizes: 64 x 64 x 64
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Partition sizes: 56 x 56 x 56
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Coordinator initialized locally with sizes 64 x 64 x 64
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Starting worker process...
+[INFO] chuc-4.lille.grid5000.fr - Coordinator: Starting 100 iterations with sizes 64 64 64
+rank,total_time,msamples_per_s
+0,3.535216,4.967622
+*,3.535216,4.967617

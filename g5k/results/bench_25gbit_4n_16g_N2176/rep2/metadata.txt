@@ -1,0 +1,84 @@
+# Metadata do experimento — gerado automaticamente
+timestamp: 2026-07-28T16:57:04+02:00
+experiment_id: 25gbit_4n_16g_N2176
+repeticao: 2 / 5
+
+## Parâmetros do experimento (do CSV, não recalculados)
+banda_rede: 25gbit
+num_nos_csv: 4
+num_gpus_csv: 16
+topologia_mpi_csv: 2x2x4
+tamanho_global_n: 2176
+vram_gb_por_gpu_csv: 29.43
+
+## Conversão para CLI (STENCIL=4, ABSORPTION=2)
+size_x=size_y=size_z: 2164
+formula: size_cli = Tamanho_Global_N - 2*STENCIL - 2*ABSORPTION
+
+## Execução real
+np: 16
+native_mode: 0
+shaping_atual: 25gbit 
+hostfile:
+  chuc-2.lille.grid5000.fr slots=4
+  chuc-3.lille.grid5000.fr slots=4
+  chuc-7.lille.grid5000.fr slots=4
+  chuc-8.lille.grid5000.fr slots=4
+map_by: slot
+bind_to: numa
+pml: ucx
+mca_pml_ucx_tls: tcp,self,sm (validated fix, see lib/run.sh header)
+return_code: 0
+elapsed_wallclock_seconds: 190
+
+## Ambiente / hardware
+node: chuc-2.lille.grid5000.fr
+  chuc-2.lille.grid5000.fr
+  GPU 0: NVIDIA A100-SXM4-40GB (UUID: GPU-f2bbaffd-866f-df95-d844-2a34804ff48e)
+  GPU 1: NVIDIA A100-SXM4-40GB (UUID: GPU-86c1e5f8-0820-3520-508e-383a6311fad3)
+  GPU 2: NVIDIA A100-SXM4-40GB (UUID: GPU-5f0516f0-d76f-50e9-8c71-b04631298c7f)
+  GPU 3: NVIDIA A100-SXM4-40GB (UUID: GPU-e0a9c4c0-f728-b25e-0215-abd3e92f8c31)
+  0, 0 %, 0 MiB, 40960 MiB
+  1, 0 %, 0 MiB, 40960 MiB
+  2, 0 %, 0 MiB, 40960 MiB
+  3, 0 %, 0 MiB, 40960 MiB
+  tc: qdisc tbf 1: root refcnt 505 rate 25Gbit burst 6246875b lat 50ms 
+node: chuc-3.lille.grid5000.fr
+  chuc-3.lille.grid5000.fr
+  GPU 0: NVIDIA A100-SXM4-40GB (UUID: GPU-64fe5dfd-0794-1389-45d2-206cbbb0d941)
+  GPU 1: NVIDIA A100-SXM4-40GB (UUID: GPU-87bee20b-66b8-16ab-c94b-a793b7f26124)
+  GPU 2: NVIDIA A100-SXM4-40GB (UUID: GPU-16994608-33fb-3c85-ecfb-4e87ed469c4a)
+  GPU 3: NVIDIA A100-SXM4-40GB (UUID: GPU-b588e206-0c9c-9d11-b0d0-953f37e909cb)
+  0, 0 %, 0 MiB, 40960 MiB
+  1, 0 %, 0 MiB, 40960 MiB
+  2, 0 %, 0 MiB, 40960 MiB
+  3, 0 %, 0 MiB, 40960 MiB
+  tc: qdisc tbf 1: root refcnt 505 rate 25Gbit burst 6246875b lat 50ms 
+node: chuc-7.lille.grid5000.fr
+  chuc-7.lille.grid5000.fr
+  GPU 0: NVIDIA A100-SXM4-40GB (UUID: GPU-a0c80bd5-a6b9-e2e6-ff8c-0808f70bf8a6)
+  GPU 1: NVIDIA A100-SXM4-40GB (UUID: GPU-32a85e21-93e5-182c-bfc4-9492d7bc32e6)
+  GPU 2: NVIDIA A100-SXM4-40GB (UUID: GPU-b4a24c79-9706-c54e-90e9-6de330e89874)
+  GPU 3: NVIDIA A100-SXM4-40GB (UUID: GPU-83e8f0e8-5340-0bb0-6227-3ae349abe3db)
+  0, 0 %, 0 MiB, 40960 MiB
+  1, 0 %, 0 MiB, 40960 MiB
+  2, 0 %, 0 MiB, 40960 MiB
+  3, 0 %, 0 MiB, 40960 MiB
+  tc: qdisc tbf 1: root refcnt 505 rate 25Gbit burst 6246875b lat 50ms 
+node: chuc-8.lille.grid5000.fr
+  chuc-8.lille.grid5000.fr
+  GPU 0: NVIDIA A100-SXM4-40GB (UUID: GPU-76471b55-24f0-4b88-79da-56922c1f7c48)
+  GPU 1: NVIDIA A100-SXM4-40GB (UUID: GPU-aec91477-c292-b5f1-2e07-2d26a2c155f5)
+  GPU 2: NVIDIA A100-SXM4-40GB (UUID: GPU-e70d4a32-fc3a-2f67-5188-5981c2d3a586)
+  GPU 3: NVIDIA A100-SXM4-40GB (UUID: GPU-77ea7ad8-854a-db38-b7ba-c8a8357b5b31)
+  0, 0 %, 0 MiB, 40960 MiB
+  1, 0 %, 0 MiB, 40960 MiB
+  2, 0 %, 0 MiB, 40960 MiB
+  3, 0 %, 0 MiB, 40960 MiB
+  tc: qdisc tbf 1: root refcnt 505 rate 25Gbit burst 6246875b lat 50ms 
+
+## Reprodutibilidade
+git_commit: a17fcf2a6637e88d3ece88a4409c5d1e78e74e38
+scripts_sha256_combined: efe3b988fff9b42081a7f4da0b98369d11e23d87759e08f7f52c649b5f92c608
+dc_binary_sha256: ee0c74ebbf8969e77097d8333a4d3373b1f13237cc8a1e412398347f7b94014a
+versions_file: /home/aandrade/ic/io-research/distributed-cube-average/g5k/logs/versions.txt (capturado uma vez por campanha, ver esse arquivo)

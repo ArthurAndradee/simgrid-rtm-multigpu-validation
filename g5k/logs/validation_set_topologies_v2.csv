@@ -1,0 +1,11 @@
+topologia,n_nos,n_gpus,n_representante,dc_gb,ground_truth_possivel,metodo_ground_truth,n_linhas_desta_topologia,n_reps_bench_por_linha
+1x2x2,1,4,64,0.00,SIM,np1_CUDA_e_OpenMP,12,5
+2x2x2,2,8,1536,28.99,SIM,np1_OpenMP_apenas,6,5
+2x2x3,3,12,1920,56.62,NAO,reprodutibilidade_entre_reps,4,5
+2x2x4,4,16,2176,82.43,NAO,reprodutibilidade_entre_reps,4,5
+2x2x5,5,20,2432,115.07,NAO,reprodutibilidade_entre_reps,2,5
+2x2x6,6,24,2560,134.22,NAO,reprodutibilidade_entre_reps,2,5
+2x3x4,6,24,2624,144.54,NAO,reprodutibilidade_entre_reps,1,5
+3x3x3,7,27,2752,166.74,NAO,reprodutibilidade_entre_reps,2,5
+2x3x5,8,30,2880,191.10,NAO,reprodutibilidade_entre_reps,1,5
+2x4x4,8,32,2944,204.13,NAO,reprodutibilidade_entre_reps,1,5

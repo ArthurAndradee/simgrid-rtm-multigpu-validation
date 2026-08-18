@@ -1,0 +1,111 @@
+# Metadata do experimento — gerado automaticamente
+timestamp: 2026-07-15T20:48:50+02:00
+experiment_id: native_1n_4g_N64
+repeticao: 1 / 5
+
+## Parâmetros do experimento (do CSV, não recalculados)
+banda_rede: native
+num_nos_csv: 1
+num_gpus_csv: 4
+topologia_mpi_csv: 1x2x2
+tamanho_global_n: 64
+vram_gb_por_gpu_csv: 0.0
+
+## Conversão para CLI (STENCIL=4, ABSORPTION=2)
+size_x=size_y=size_z: 52
+formula: size_cli = Tamanho_Global_N - 2*STENCIL - 2*ABSORPTION
+
+## Execução real
+np: 4
+native_mode: 1
+shaping_atual: off
+hostfile:
+  chuc-4.lille.grid5000.fr slots=4
+map_by: slot
+bind_to: numa
+pml: ucx
+mca_pml_ucx_tls: unset (native/RDMA path)
+return_code: 0
+elapsed_wallclock_seconds: 11
+
+## Ambiente / hardware
+node: chuc-4.lille.grid5000.fr
+  chuc-4.lille.grid5000.fr
+  GPU 0: NVIDIA A100-SXM4-40GB (UUID: GPU-8463bb71-acdb-271e-7548-9a72fb92cc98)
+  GPU 1: NVIDIA A100-SXM4-40GB (UUID: GPU-7ff692b1-3ca5-c180-6c0d-44cef416139b)
+  GPU 2: NVIDIA A100-SXM4-40GB (UUID: GPU-8d185e34-5ac9-77f8-f98d-26c1a01f1ec8)
+  GPU 3: NVIDIA A100-SXM4-40GB (UUID: GPU-c70af67b-ee39-e4ac-c54f-4f1211854354)
+  0, 0 %, 0 MiB, 40960 MiB
+  1, 0 %, 0 MiB, 40960 MiB
+  2, 0 %, 0 MiB, 40960 MiB
+  3, 7 %, 0 MiB, 40960 MiB
+  tc: qdisc mq 0: root 
+  tc: qdisc pfifo_fast 0: parent :3f bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :3e bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :3d bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :3c bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :3b bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :3a bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :39 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :38 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :37 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :36 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :35 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :34 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :33 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :32 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :31 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :30 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :2f bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :2e bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :2d bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :2c bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :2b bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :2a bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :29 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :28 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :27 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :26 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :25 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :24 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :23 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :22 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :21 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :20 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :1f bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :1e bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :1d bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :1c bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :1b bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :1a bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :19 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :18 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :17 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :16 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :15 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :14 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :13 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :12 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :11 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :10 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :f bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :e bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :d bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :c bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :b bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :a bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :9 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :8 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :7 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :6 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :5 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :4 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :3 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :2 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+  tc: qdisc pfifo_fast 0: parent :1 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+
+## Reprodutibilidade
+git_commit: 4bd74bb7f6ec5fc1829db89f1af373711a0d9f3c
+scripts_sha256_combined: d2e52ca404c1eca6cadfe20f0b94f08317a4eb30f30ee32436326df60ce33fb6
+dc_binary_sha256: 4e378ac41f6be908e19688913991130ad4a24858828fad0571224bd87ba96da4
+versions_file: /home/aandrade/ic/io-research/distributed-cube-average/g5k/logs/versions.txt (capturado uma vez por campanha, ver esse arquivo)

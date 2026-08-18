@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+  \centering
+  \caption{Fidelity error (Option C: shared-NIC chuc platform, original poti network calibration, native A100 kernel sampling) between SimGrid prediction and real measurement, per node count and bandwidth.}
+  \label{tab:fidelity-error}
+  \begin{tabular}{rlrrrrrr}
+    \toprule
+    Nodes & Band & Sim. thr. (MSamples/s) & Real thr. (MSamples/s) & Fidelity error thr. (%) & Sim. ME (%) & Real ME (%) & Fidelity error ME (pp) \\
+    \midrule
+    1 & 1 Gbit/s & 3153.4 & 3266.5 & -3.5 & 81.7 & 84.7 & -3.0 \\
+    1 & 10 Gbit/s & 3051.6 & 3325.8 & -8.2 & 81.3 & 83.7 & -2.4 \\
+    1 & 25 Gbit/s & 3156.4 & 3298.5 & -4.3 & 79.5 & 85.1 & -5.6 \\
+    2 & 1 Gbit/s & 2440.1 & 4886.9 & -50.1 & 23.5 & 44.9 & -21.4 \\
+    2 & 10 Gbit/s & 7603.3 & 7783.2 & -2.3 & 78.0 & 78.3 & -0.3 \\
+    2 & 25 Gbit/s & 7422.7 & 7398.0 & +0.3 & 78.1 & 74.4 & +3.7 \\
+    3 & 1 Gbit/s & 1590.7 & 2863.0 & -44.4 & 5.5 & 28.9 & -23.4 \\
+    3 & 10 Gbit/s & 11817.4 & 5915.7 & +99.8 & 44.3 & 62.2 & -17.9 \\
+    3 & 25 Gbit/s & 16950.2 & 5960.8 & +184.4 & 69.0 & 63.1 & +5.9 \\
+    4 & 1 Gbit/s & 1834.0 & 3445.9 & -46.8 & 4.4 & 26.2 & -21.8 \\
+    4 & 10 Gbit/s & NA & 8107.0 & NA & NA & 63.7 & NA \\
+    \bottomrule
+  \end{tabular}
+\end{table}

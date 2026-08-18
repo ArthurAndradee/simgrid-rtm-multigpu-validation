@@ -1,0 +1,16 @@
+# Simulated run — REDUCED N=1800 (NOT Table 3's original anchor) to fit real
+# A100 VRAM under SMPI's single-real-machine oversubscription. Compare
+# against a REAL reference run at the SAME N (see REDUCED_N_RUNBOOK.md),
+# NOT against Table 3's published 3-4 node numbers (different N).
+label: 3n_25Gbps
+nodes: 3
+ranks_per_node: 4
+total_hosts: 12
+anchor_N: 1800 (REDUCED from original Table 3 anchor -- see script header)
+cuda_size: 1788
+bandwidth: 25Gbps
+net_lat: 22.7us (reused unchanged from original poti calibration)
+platform: simgrid-chuc-validation/platform_shared_nic.cpp
+smpi_calibration: copied verbatim from run_validation.sh
+iterations: 100
+timestamp: 2026-08-17T14:54:11+02:00

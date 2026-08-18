@@ -1,0 +1,197 @@
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/privatization' to 'ON'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/np' to '16'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/hostfile' to '/home/aandrade/ic/io-research/distributed-cube-average/simgrid-chuc-validation/results/4n_1Gbps/hostfile.txt'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing' to 'yes'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing/filename' to 'smpi_simgrid.trace'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing/smpi' to 'yes'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'precision/timing' to '1e-9'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'network/model' to 'SMPI'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'contexts/factory' to 'thread'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/display-timing' to 'yes'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'precision/timing' to '1e-9'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing/precision' to '9'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/shared-malloc' to 'global'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/host-speed' to '1'
+[0.000000] ../src/xbt/xbt_parse_units.cpp:71: [parse/WARNING] Deprecated unit-less value '1' for option smpi/host-speed. Append 'f' or 'flops' to your speed to get flop per second
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/os' to '0:4.17e-07:9.3e-08;2:1.2688358242159313e-06:5.509165162627468e-11;846:1.2427927374751976e-06:7.629724927795766e-11;1182:1.01878039474522e-06:2.2976714190789488e-10;6687:7.212526152845653e-07:2.3548673558712826e-10;65480:0.0:0.0'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/or' to '0:1.074e-06:6.000000000000027e-09;2:1.0473771622457872e-06:1.5567156532620197e-10;846:1.2421788110402576e-06:7.174648137343064e-43;1182:1.6995035871937564e-06:1.348689114201127e-10;6687:1.758151339164401e-06:1.1446056239417835e-10;65480:0.0:0.0'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/ois' to '0:4.99e-07:6.2e-08;2:5.71513825856767e-07:3.681266485442063e-11;846:1.3753277297356838e-07:3.538717583470924e-10;1182:2.0886700989740583e-07:1.9666759173075344e-10;6687:2.938735877055719e-39:1.105170449896893e-10;65480:5.548287028763466e-07:1.5407086056396026e-13'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/bw-factor' to '0:1.0;2:0.4510053758462671;846:0.5091684623185814;1182:0.948984644166369;6687:0.9193943188688236;65480:0.9412414252627215'
+[0.000000] [xbt_cfg/INFO] Option smpi/bw-factor has been renamed to network/bandwidth-factor. Consider switching.
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/lat-factor' to '0:0.837740263193759;2:0.790246085987436;846:1.0647374762712742;1182:1.4653793019194907;6687:1.394904217619273;65480:4.25253968678777'
+[0.000000] [xbt_cfg/INFO] Option smpi/lat-factor has been renamed to network/latency-factor. Consider switching.
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/iprobe' to '1.6269591164444444e-07'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/test' to '1.4119688221333333e-07'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/async-small-thresh' to '65480'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/send-is-detached-thresh' to '65480'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing/filename' to 'dc.trace'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/tmpdir' to '/tmp/nix-shell.lTUrHv'
+Platform configuration (shared-NIC model):
+  num_nodes: 4
+  ranks_per_node: 4
+  net_bw (shared, per node): 1Gbps
+  net_lat: 22.7us
+  intra_bw (per rank, within node): 200GBps
+  intra_lat: 0.1us
+  hostfile_path: /home/aandrade/ic/io-research/distributed-cube-average/simgrid-chuc-validation/results/4n_1Gbps/hostfile.txt
+[S4U Plugin] Loading shared-NIC platform: 4 node(s) x 4 rank(s).
+[INFO] chicoree-1.lille.grid5000.fr - Worker 9: Awaiting partition info from coordinator...
+[INFO] chicoree-1.lille.grid5000.fr - Worker 10: Awaiting partition info from coordinator...
+[INFO] chicoree-1.lille.grid5000.fr - Worker 11: Awaiting partition info from coordinator...
+[INFO] chicoree-1.lille.grid5000.fr - Worker 8: Awaiting partition info from coordinator...
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Distributing partition info to workers...
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Distributing partition info to 16 workers...
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Global sizes: 2176 x 2176 x 2176
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Partition sizes: 542 x 1084 x 1084
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Worker 4 will handle source at local index 654051746
+[INFO] chicoree-1.lille.grid5000.fr - Worker 1: Awaiting partition info from coordinator...
+[INFO] chicoree-1.lille.grid5000.fr - Worker 2: Awaiting partition info from coordinator...
+[INFO] chicoree-1.lille.grid5000.fr - Worker 3: Awaiting partition info from coordinator...
+[INFO] chicoree-1.lille.grid5000.fr - Worker 4: Awaiting partition info from coordinator...
+[INFO] chicoree-1.lille.grid5000.fr - Worker 5: Awaiting partition info from coordinator...
+[INFO] chicoree-1.lille.grid5000.fr - Worker 6: Awaiting partition info from coordinator...
+[INFO] chicoree-1.lille.grid5000.fr - Worker 7: Awaiting partition info from coordinator...
+[INFO] chicoree-1.lille.grid5000.fr - Worker 12: Awaiting partition info from coordinator...
+[INFO] chicoree-1.lille.grid5000.fr - Worker 13: Awaiting partition info from coordinator...
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Sent partition info to worker 4
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Worker 8 will handle source at local index 654051204
+[INFO] chicoree-1.lille.grid5000.fr - Worker 14: Awaiting partition info from coordinator...
+[INFO] chicoree-1.lille.grid5000.fr - Worker 15: Awaiting partition info from coordinator...
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Sent partition info to worker 8
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Sent partition info to worker 12
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Sent partition info to worker 2
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Worker 6 will handle source at local index 653455546
+[INFO] chicoree-1.lille.grid5000.fr - Worker 2: Received partition info: local 550x1092x1092, global 2176x2176x2176
+[INFO] chicoree-1.lille.grid5000.fr - Worker 2: Local initialization complete
+[INFO] chicoree-1.lille.grid5000.fr - Worker 2: Local initialization complete.
+[INFO] chicoree-1.lille.grid5000.fr - Worker 2: Starting worker process...
+[INFO] chicoree-1.lille.grid5000.fr - Worker 4: Received partition info: local 550x1092x1092, global 2176x2176x2176
+[INFO] chicoree-1.lille.grid5000.fr - Worker 4: Local initialization complete
+[INFO] chicoree-1.lille.grid5000.fr - Worker 4: Local initialization complete.
+[INFO] chicoree-1.lille.grid5000.fr - Worker 4: Starting worker process...
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Sent partition info to worker 6
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Worker 10 will handle source at local index 653455004
+[INFO] chicoree-1.lille.grid5000.fr - Worker 8: Received partition info: local 550x1092x1092, global 2176x2176x2176
+[INFO] chicoree-1.lille.grid5000.fr - Worker 8: Local initialization complete
+[INFO] chicoree-1.lille.grid5000.fr - Worker 8: Local initialization complete.
+[INFO] chicoree-1.lille.grid5000.fr - Worker 8: Starting worker process...
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Sent partition info to worker 10
+[INFO] chicoree-1.lille.grid5000.fr - Worker 12: Received partition info: local 550x1092x1092, global 2176x2176x2176
+[INFO] chicoree-1.lille.grid5000.fr - Worker 12: Local initialization complete
+[INFO] chicoree-1.lille.grid5000.fr - Worker 12: Local initialization complete.
+[INFO] chicoree-1.lille.grid5000.fr - Worker 12: Starting worker process...
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Sent partition info to worker 14
+[INFO] chicoree-1.lille.grid5000.fr - Worker 6: Received partition info: local 550x1092x1092, global 2176x2176x2176
+[INFO] chicoree-1.lille.grid5000.fr - Worker 6: Local initialization complete
+[INFO] chicoree-1.lille.grid5000.fr - Worker 6: Local initialization complete.
+[INFO] chicoree-1.lille.grid5000.fr - Worker 6: Starting worker process...
+[INFO] chicoree-1.lille.grid5000.fr - Worker 10: Received partition info: local 550x1092x1092, global 2176x2176x2176
+[INFO] chicoree-1.lille.grid5000.fr - Worker 10: Local initialization complete
+[INFO] chicoree-1.lille.grid5000.fr - Worker 10: Local initialization complete.
+[INFO] chicoree-1.lille.grid5000.fr - Worker 10: Starting worker process...
+[INFO] chicoree-1.lille.grid5000.fr - Worker 14: Received partition info: local 550x1092x1092, global 2176x2176x2176
+[INFO] chicoree-1.lille.grid5000.fr - Worker 14: Local initialization complete
+[INFO] chicoree-1.lille.grid5000.fr - Worker 14: Local initialization complete.
+[INFO] chicoree-1.lille.grid5000.fr - Worker 14: Starting worker process...
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Sent partition info to worker 1
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Worker 5 will handle source at local index 3001346
+[INFO] chicoree-1.lille.grid5000.fr - Worker 1: Received partition info: local 550x1092x1092, global 2176x2176x2176
+[INFO] chicoree-1.lille.grid5000.fr - Worker 1: Local initialization complete
+[INFO] chicoree-1.lille.grid5000.fr - Worker 1: Local initialization complete.
+[INFO] chicoree-1.lille.grid5000.fr - Worker 1: Starting worker process...
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Sent partition info to worker 5
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Worker 9 will handle source at local index 3000804
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Sent partition info to worker 9
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Sent partition info to worker 13
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Sent partition info to worker 3
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Worker 7 will handle source at local index 2405146
+[INFO] chicoree-1.lille.grid5000.fr - Worker 3: Received partition info: local 550x1092x1092, global 2176x2176x2176
+[INFO] chicoree-1.lille.grid5000.fr - Worker 3: Local initialization complete
+[INFO] chicoree-1.lille.grid5000.fr - Worker 3: Local initialization complete.
+[INFO] chicoree-1.lille.grid5000.fr - Worker 3: Starting worker process...
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Sent partition info to worker 7
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Worker 11 will handle source at local index 2404604
+[INFO] chicoree-1.lille.grid5000.fr - Worker 5: Received partition info: local 550x1092x1092, global 2176x2176x2176
+[INFO] chicoree-1.lille.grid5000.fr - Worker 5: Local initialization complete
+[INFO] chicoree-1.lille.grid5000.fr - Worker 5: Local initialization complete.
+[INFO] chicoree-1.lille.grid5000.fr - Worker 5: Starting worker process...
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Sent partition info to worker 11
+[INFO] chicoree-1.lille.grid5000.fr - Worker 9: Received partition info: local 550x1092x1092, global 2176x2176x2176
+[INFO] chicoree-1.lille.grid5000.fr - Worker 9: Local initialization complete
+[INFO] chicoree-1.lille.grid5000.fr - Worker 9: Local initialization complete.
+[INFO] chicoree-1.lille.grid5000.fr - Worker 9: Starting worker process...
+[INFO] chicoree-1.lille.grid5000.fr - Worker 13: Received partition info: local 550x1092x1092, global 2176x2176x2176
+[INFO] chicoree-1.lille.grid5000.fr - Worker 13: Local initialization complete
+[INFO] chicoree-1.lille.grid5000.fr - Worker 13: Local initialization complete.
+[INFO] chicoree-1.lille.grid5000.fr - Worker 13: Starting worker process...
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Sent partition info to worker 15
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Coordinator initialized locally with sizes 550 x 1092 x 1092
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Starting worker process...
+[INFO] chicoree-1.lille.grid5000.fr - Worker 7: Received partition info: local 550x1092x1092, global 2176x2176x2176
+[INFO] chicoree-1.lille.grid5000.fr - Worker 7: Local initialization complete
+[INFO] chicoree-1.lille.grid5000.fr - Worker 7: Local initialization complete.
+[INFO] chicoree-1.lille.grid5000.fr - Worker 7: Starting worker process...
+[INFO] chicoree-1.lille.grid5000.fr - Worker 11: Received partition info: local 550x1092x1092, global 2176x2176x2176
+[INFO] chicoree-1.lille.grid5000.fr - Worker 11: Local initialization complete
+[INFO] chicoree-1.lille.grid5000.fr - Worker 11: Local initialization complete.
+[INFO] chicoree-1.lille.grid5000.fr - Worker 11: Starting worker process...
+[INFO] chicoree-1.lille.grid5000.fr - Worker 15: Received partition info: local 550x1092x1092, global 2176x2176x2176
+[INFO] chicoree-1.lille.grid5000.fr - Worker 15: Local initialization complete
+[INFO] chicoree-1.lille.grid5000.fr - Worker 15: Local initialization complete.
+[INFO] chicoree-1.lille.grid5000.fr - Worker 15: Starting worker process...
+[INFO] chicoree-1.lille.grid5000.fr - Coordinator: Starting 100 iterations with sizes 550 1092 1092
+CUDA source using device (0) NVIDIA H200 NVL with compute capability 9.0
+[INFO] chicoree-1.lille.grid5000.fr - Worker 4: Starting 100 iterations with sizes 550 1092 1092
+CUDA source using device (0) NVIDIA H200 NVL with compute capability 9.0
+[INFO] chicoree-1.lille.grid5000.fr - Worker 3: Starting 100 iterations with sizes 550 1092 1092
+CUDA source using device (3) NVIDIA H200 NVL with compute capability 9.0
+[INFO] chicoree-1.lille.grid5000.fr - Worker 1: Starting 100 iterations with sizes 550 1092 1092
+CUDA source using device (1) NVIDIA H200 NVL with compute capability 9.0
+[INFO] chicoree-1.lille.grid5000.fr - Worker 7: Starting 100 iterations with sizes 550 1092 1092
+CUDA source using device (3) NVIDIA H200 NVL with compute capability 9.0
+[INFO] chicoree-1.lille.grid5000.fr - Worker 9: Starting 100 iterations with sizes 550 1092 1092
+CUDA source using device (1) NVIDIA H200 NVL with compute capability 9.0
+[INFO] chicoree-1.lille.grid5000.fr - Worker 2: Starting 100 iterations with sizes 550 1092 1092
+CUDA source using device (2) NVIDIA H200 NVL with compute capability 9.0
+[INFO] chicoree-1.lille.grid5000.fr - Worker 5: Starting 100 iterations with sizes 550 1092 1092
+CUDA source using device (1) NVIDIA H200 NVL with compute capability 9.0
+[INFO] chicoree-1.lille.grid5000.fr - Worker 6: Starting 100 iterations with sizes 550 1092 1092
+CUDA source using device (2) NVIDIA H200 NVL with compute capability 9.0
+[INFO] chicoree-1.lille.grid5000.fr - Worker 13: Starting 100 iterations with sizes 550 1092 1092
+CUDA source using device (1) NVIDIA H200 NVL with compute capability 9.0
+[INFO] chicoree-1.lille.grid5000.fr - Worker 11: Starting 100 iterations with sizes 550 1092 1092
+CUDA source using device (3) NVIDIA H200 NVL with compute capability 9.0
+[INFO] chicoree-1.lille.grid5000.fr - Worker 15: Starting 100 iterations with sizes 550 1092 1092
+CUDA source using device (3) NVIDIA H200 NVL with compute capability 9.0
+[INFO] chicoree-1.lille.grid5000.fr - Worker 10: Starting 100 iterations with sizes 550 1092 1092
+CUDA source using device (2) NVIDIA H200 NVL with compute capability 9.0
+[INFO] chicoree-1.lille.grid5000.fr - Worker 14: Starting 100 iterations with sizes 550 1092 1092
+CUDA source using device (2) NVIDIA H200 NVL with compute capability 9.0
+[INFO] chicoree-1.lille.grid5000.fr - Worker 12: Starting 100 iterations with sizes 550 1092 1092
+CUDA source using device (0) NVIDIA H200 NVL with compute capability 9.0
+[INFO] chicoree-1.lille.grid5000.fr - Worker 8: Starting 100 iterations with sizes 550 1092 1092
+CUDA source using device (0) NVIDIA H200 NVL with compute capability 9.0
+rank,total_time,msamples_per_s
+0,555.612938,115.450092
+*,555.612938,1834.025980
+3,544.582246,117.261055
+2,544.487969,117.286661
+1,544.510762,117.275093
+15,544.467330,117.245430
+14,544.401827,117.261762
+13,544.437536,117.283278
+12,544.462344,117.265810
+11,544.494419,117.248191
+10,544.448459,117.250272
+9,544.547079,117.422577
+8,543.591405,117.507206
+7,544.549199,117.235394
+6,544.499476,117.237518
+5,544.497906,117.246735
+4,544.750486,117.190896
+[586.817758] [smpi_utils/INFO] Simulated time: 586.818 seconds. 
+
+The simulation took 1099.55 seconds (after parsing and platform setup)
+956.157 seconds were actual computation of the application
+[586.817758] [smpi_utils/INFO] More than 75% of the time was spent inside the application code.
+You may want to use sampling functions or trace replay to reduce this.

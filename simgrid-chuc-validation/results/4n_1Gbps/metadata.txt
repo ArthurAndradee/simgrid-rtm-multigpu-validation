@@ -1,0 +1,13 @@
+# Simulated run — Option C (shared-NIC chuc platform, original poti network calibration)
+label: 4n_1Gbps
+nodes: 4
+ranks_per_node: 4
+total_hosts: 16
+anchor_N: 2176
+cuda_size: 2164
+bandwidth: 1Gbps
+net_lat: 22.7us (reused unchanged from original poti calibration -- not chuc-specific)
+platform: simgrid-chuc-validation/platform_shared_nic.cpp
+smpi_calibration: copied verbatim from nix/scripts.nix runSimgridPlatformCuda (Cornebize methodology, poti/1Gbit/s)
+iterations: 100
+timestamp: 2026-08-13T18:42:20+02:00

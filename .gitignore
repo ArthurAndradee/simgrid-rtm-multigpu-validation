@@ -1,0 +1,54 @@
+# Build artifacts
+bin/
+bin_sim/
+bin_openmp_gt/
+*.o
+*.so
+result
+result-*
+
+# Raw per-run traces (large, regenerable by re-running the documented
+# pipeline; aggregated CSVs derived from them ARE kept under
+# analysis/ and simgrid-chuc-validation/*.csv)
+dc.csv
+dc.trace
+rastro-*.rst
+*.raw
+
+# Runtime/operational state (hostfiles, SSH keys, cluster IPs, bootstrap
+# markers) -- never meant for the artifact, regenerated per allocation
+state/
+.reduced_n_real_bootstrap_done
+.nfs*
+
+# Nix
+.direnv/
+/.nix-*
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Python
+__pycache__/
+*.pyc
+
+# LaTeX build artifacts (note: *.log is intentionally NOT ignored here --
+# small provenance logs like platform_gen.log and ground_truth_*.log under
+# results/ are tracked on purpose; only main.aux/main.out/etc from actually
+# compiling the paper would appear, and those are scoped to papers/ anyway)
+*.aux
+*.bbl
+*.blg
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.toc
+
+# Editor/OS
+.DS_Store
+*.swp
+.vscode/
+.idea/
