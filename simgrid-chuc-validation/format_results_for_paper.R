@@ -1,8 +1,8 @@
 # format_results_for_paper.R — joins real-campaign stats (5 reps,
 # analysis/results_package/tables/part1_statistics.csv) with Level 1 and
 # Level 2 simulated results, producing two paper-ready, richly-documented
-# CSVs meant to be attached directly to a browser Claude session for
-# drafting the results/discussion section and judging what needs a figure.
+# CSVs used to draft the results/discussion section and to decide what
+# needs a figure.
 #
 # Usage: conda activate r-analysis && Rscript simgrid-chuc-validation/format_results_for_paper.R
 # Writes:

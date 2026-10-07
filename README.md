@@ -6,6 +6,12 @@ Andrade da Silva, Vinícius Daniel Spadotto, Cristiano Alex Künas, Lucas
 Mello Schnorr, Phillipe Olivier Alexandre Navaux — Institute of
 Informatics, UFRGS).
 
+> **Branch `campanha-2026-10`**: adds the post-paper data (October 2026): the
+> complete strong-scaling campaign, new Level 2 simulations and network
+> measurements on chuc, with the paper's figures and tables rebuilt on them.
+> Start at [`campanha-2026-10/README.md`](campanha-2026-10/README.md) (in Portuguese).
+> The `main` branch is the paper's artifact, unchanged.
+
 ## What this is
 
 A SimGrid/SMPI model of Fletcher — an anisotropic reverse time migration
@@ -51,10 +57,10 @@ figures, and the engineering log kept during the real campaign.
 │   ├── conf/defaults.conf      campaign-wide physics/domain constants
 │   ├── csv/experimentos.csv    the experiment design (weak-scaling anchor
 │   │                            sizes × node counts × bandwidths × reps)
-│   ├── logs/                   engineering diary (diario_de_bordo.md) +
-│   │                            infrastructure/campaign design notes kept
-│   │                            DURING the real campaign — the paper's
-│   │                            "provenance tracking" contribution
+│   ├── logs/                   engineering diary (diario_de_bordo.md) and
+│   │                            toolchain versions, kept DURING the real
+│   │                            campaign — the paper's "provenance tracking"
+│   │                            contribution (design notes: main branch)
 │   └── results/                per-(config,rep) real run outputs: final
 │                                stats (dc.output) + provenance
 │                                (metadata.txt, hostfile.mpi) for every

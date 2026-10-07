@@ -12,7 +12,7 @@ Results/Discussion section can be drafted directly from this.
 Level 1 (BACKEND=simgrid_cuda, real online GPU kernel sampling on chuc) has
 been blocked since 2026-08-12 by an unresolved SMPI `dlopen` failure ("cannot
 dynamically load position-independent executable") — see §5 below and
-`simgrid-chuc-validation/dlopen_repro/`. Level 2 is a substitute that keeps
+`simgrid-chuc-validation/dlopen_repro/` (main branch). Level 2 is a substitute that keeps
 the original network model completely unchanged and replaces only the
 compute component: instead of sampling kernel time live (which needs a real
 GPU and hits the same dlopen bug), the real per-iteration A100 kernel time is
@@ -220,7 +220,7 @@ refinement.
 On a fresh chuc allocation (chuc-7 + chuc-8, CUDA 12.8 / SimGrid 4.0 via the
 flake devShell, vs. whatever combination triggered it originally) the
 `dlopen` bug simply did not reproduce — neither in the minimal repro
-(`dlopen_repro/run_repro.sh`, exit 0) nor in the real `bin/dc`. Root cause
+(`dlopen_repro/run_repro.sh` (main branch), exit 0) nor in the real `bin/dc`. Root cause
 was never conclusively identified (the two hypotheses in the `Makefile`'s
 `simgrid_cuda` section — static/dynamic `cudart` linking, PIE/PIC — were
 disproven back in the original investigation too), but it is not blocking
@@ -295,7 +295,7 @@ low-bandwidth degradation pattern flagged for Level 2 in §4 (throughput
 investigating together as likely the same root cause (probably the network
 model's 1Gbit/s-specific calibration, not a Level-1-specific compute issue,
 since Level 1 and Level 2 share the exact same network calibration and
-platform). Not investigated further this session.
+platform). Not investigated further at the time.
 
 ### 6.4 3-node and 4-node on chuc: blocked by a real GPU VRAM ceiling (superseded — see §6.5)
 
@@ -341,7 +341,7 @@ t=+67s simulated, well before doing any real work).
 
 ### 6.5 Unblocked via a chicoree-1 allocation (H200, 140GB/GPU) — 10/12 total, but with a new hardware-mismatch caveat
 
-The user allocated `chicoree-1.lille.grid5000.fr` (4× NVIDIA H200 NVL,
+We allocated `chicoree-1.lille.grid5000.fr` (4× NVIDIA H200 NVL,
 ~140GB VRAM each, 1TB host RAM) specifically to remove the §6.4 VRAM
 ceiling. Rebuilt with `make BACKEND=simgrid_cuda ARCH=sm_90` (H200 is
 Hopper, compute capability 9.0 — the Makefile already exposed `ARCH` as an
@@ -531,7 +531,7 @@ reasonable candidate explanation for the paper's limitations/future-work
 discussion of this recurring pattern, in place of leaving it as an
 unexplained anomaly.
 
-## 7. Files changed/added this session
+## 7. Files changed/added in this phase
 
 - `src/worker.c` — `DC_FIXED_BOUNDARIES_S`/`DC_FIXED_INTERIOR_S`/
   `DC_FIXED_BOOKKEEPING_S` injection (SIMGRID-only, `BACKEND=cuda` untouched),
@@ -551,7 +551,7 @@ unexplained anomaly.
   topology, DTD-portable across SimGrid versions.
 - `simgrid-chuc-validation/compute_fidelity_error_level2.R` — final analysis
   script (§2's table).
-- `simgrid-chuc-validation/dlopen_repro/` — minimal CUDA+SMPI repro, used
+- `simgrid-chuc-validation/dlopen_repro/` (main branch) — minimal CUDA+SMPI repro, used
   2026-08-13 to confirm the `dlopen` bug no longer reproduces (§6.1).
 - `simgrid-chuc-validation/fidelity_error_level2.csv` — machine-readable
   results.
@@ -593,13 +593,14 @@ unexplained anomaly.
 4. Level 1 is at 10/12: `4n_10Gbps` and `4n_25Gbps` were never completed
    (chicoree-1's allocation ran out of walltime mid-init on `4n_10Gbps`).
    Also, the 3-node/4-node results that DO exist were sampled on chicoree's
-   H200 GPUs, not the real campaign's A100s (§6.5) — decide, with the user,
-   whether to (a) present 3-4 node Level 1 numbers with the hardware-mismatch
+   H200 GPUs, not the real campaign's A100s (§6.5) — the options were
+   to (a) present 3-4 node Level 1 numbers with the hardware-mismatch
    caveat as-is, (b) re-run 3-4 node Level 1 on an A100 (chuc) allocation
    with ≥3 nodes' worth of real GPUs for a same-hardware comparison, or
    (c) drop 3-4 node Level 1 from the paper and rely on Level 2 (already
-   same-hardware, 12/12) for those topologies. Not decided this session —
-   a scope call, not a bug fix. If (b): the VRAM-ceiling numbers in §6.4
+   same-hardware, 12/12) for those topologies. Decided 2026-08-13/14: a
+   same-hardware (A100) re-run at a reduced anchor size
+   (REDUCED_N_RUNBOOK.md). For (b): the VRAM-ceiling numbers in §6.4
    (≈14.4GB/rank, 40GB/A100) tell you exactly how many real A100 GPUs are
    needed to avoid oversubscription (≥3/GPU is unsafe) — a 3-node chuc
    allocation of ≥2 real nodes each contributing enough real GPUs to a
@@ -608,5 +609,5 @@ unexplained anomaly.
    (4-node) each removes it on A100-class hardware, or a single real node
    with more than 4 real GPUs so ranks-per-GPU drops below the 40GB line.
 5. (Done 2026-08-13, kept for traceability) Level 1's `dlopen` bug: ran
-   `dlopen_repro/run_repro.sh` on the fresh chuc-7/chuc-8 allocation — did
+   `dlopen_repro/run_repro.sh` (main branch) on the fresh chuc-7/chuc-8 allocation — did
    not reproduce. See §6.1.

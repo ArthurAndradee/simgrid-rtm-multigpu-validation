@@ -12,7 +12,7 @@
 # real-execution RECIPE -- same UCX/pml_ucx_tls fix, same driver bridge, same
 # mpirun flags -- as g5k/lib/run.sh / 05-run.sh (read for reference, not
 # modified, not sourced) but bootstraps via `sudo-g5k` + a manual Nix
-# install (same pattern already validated this session on chuc-7/chuc-8/
+# install (same pattern already validated on chuc-7/chuc-8/
 # chicoree-1) instead of kadeploy3, and shapes bandwidth on the PRODUCTION
 # interface directly (the whole node is exclusively ours for the job's
 # duration either way) instead of a kavlan-isolated one.

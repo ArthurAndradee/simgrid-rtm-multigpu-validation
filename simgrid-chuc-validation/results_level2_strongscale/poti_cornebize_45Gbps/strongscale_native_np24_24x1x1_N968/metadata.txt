@@ -1,0 +1,5 @@
+experiment_id: strongscale_native_np24_24x1x1_N968
+np: 24 topology: 24x1x1 nodes: 6 ranks_per_node: 4
+net_bw: 45Gbps net_lat: 22.7us calibration: /home/aandrade/ic/io-research/distributed-cube-average/simgrid-chuc-validation/calibrations/poti_cornebize.cfg
+compute_source: /home/aandrade/ic/io-research/distributed-cube-average/analysis/level2_compute_constants_strongscale.csv (per-topology, real A100, iteration>1)
+timestamp: 2026-10-02T18:23:56+02:00

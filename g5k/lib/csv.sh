@@ -194,9 +194,9 @@ csv_is_topology_representative() {
 # csv_expected_dc_bytes <N> — exact expected size of a FULL run's
 # --output-file, derived from coordinator.c's write loop (writes
 # DC_OUTPUT_FIELDS floats of DC_FLOAT_BYTES bytes each, per GLOBAL index).
-# [EMP] validated 2026-07-15 against two real files: N=28 test run ->
-# 175616 bytes == 28^3*2*4 exactly; N=1536 real campaign file (session
-# 2026-07-10) -> 28991029248 bytes == 1536^3*2*4 exactly. Used by both the
+# Validated 2026-07-15 against two real files: N=28 test run ->
+# 175616 bytes == 28^3*2*4 exactly; N=1536 real campaign file
+# (2026-07-10) -> 28991029248 bytes == 1536^3*2*4 exactly. Used by both the
 # disk preflight (validate_disk_space_for_full) and the full-run integrity
 # check (checkpoint_integrity_ok) — one formula, no duplicated logic.
 csv_expected_dc_bytes() {

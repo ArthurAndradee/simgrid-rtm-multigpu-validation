@@ -18,6 +18,7 @@ typedef struct {
   size_t absorption_size;
   char *output_file;
   int skip_output;
+  int topology[DIMENSIONS];
 } dc_arguments_t;
 
 typedef struct {

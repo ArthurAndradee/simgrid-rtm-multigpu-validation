@@ -1,0 +1,13 @@
+sim_set,nodes,band,real_condition,reps_real,real_throughput,sim_throughput,throughput_err_pct,real_loop_s,sim_loop_s,loop_ratio_sim_over_real
+poti_cornebize_SHARED,1,10Gbps,10gbit,5,3330.0,8245.9,147.6,66.42,28.92,0.435
+poti_cornebize_SHARED,1,1Gbps,1gbit,5,3268.6,8245.9,152.3,67.84,28.92,0.426
+poti_cornebize_SHARED,1,25Gbps,25gbit,5,3312.3,8245.9,148.9,66.81,28.92,0.433
+poti_cornebize_SHARED,2,10Gbps,10gbit,5,7769.2,19084.5,145.6,60.08,26.81,0.446
+poti_cornebize_SHARED,2,1Gbps,1gbit,5,4840.9,2981.2,-38.4,99.77,170.69,1.711
+poti_cornebize_SHARED,2,25Gbps,25gbit,5,7700.5,19084.5,147.8,60.6,26.81,0.442
+poti_cornebize_SHARED,3,10Gbps,10gbit,5,5881.6,16566.7,181.7,113.84,42.24,0.371
+poti_cornebize_SHARED,3,1Gbps,1gbit,5,2861.4,1659.1,-42.0,239.93,421.32,1.756
+poti_cornebize_SHARED,3,25Gbps,25gbit,5,5958.3,22302.7,274.3,112.56,31.66,0.281
+poti_cornebize_SHARED,4,10Gbps,10gbit,5,8147.5,18810.0,130.9,119.78,54.28,0.453
+poti_cornebize_SHARED,4,1Gbps,1gbit,5,3465.9,1883.4,-45.7,290.13,541.09,1.865
+poti_cornebize_SHARED,4,25Gbps,25gbit,5,8036.9,28192.8,250.8,121.78,36.71,0.301

@@ -1,0 +1,48 @@
+#      Transport: posix
+#         Device: memory
+#            bandwidth: 0.00/ppn + 12179.00 MB/sec
+#      Transport: sysv
+#         Device: memory
+#            bandwidth: 0.00/ppn + 12179.00 MB/sec
+#      Transport: self
+#         Device: memory
+#            bandwidth: 0.00/ppn + 6911.00 MB/sec
+#      Transport: tcp
+#         Device: ens15f0np0
+#            bandwidth: 2829.09/ppn + 0.00 MB/sec
+#      Transport: tcp
+#         Device: ens15f1np1
+#            bandwidth: 2829.09/ppn + 0.00 MB/sec
+#      Transport: rc_verbs
+#         Device: mlx5_0:1
+#            bandwidth: 2739.46/ppn + 0.00 MB/sec
+#      Transport: rc_mlx5
+#         Device: mlx5_0:1
+#            bandwidth: 2739.46/ppn + 0.00 MB/sec
+#      Transport: dc_mlx5
+#         Device: mlx5_0:1
+#            bandwidth: 2739.46/ppn + 0.00 MB/sec
+#      Transport: ud_verbs
+#         Device: mlx5_0:1
+#            bandwidth: 2739.46/ppn + 0.00 MB/sec
+#      Transport: ud_mlx5
+#         Device: mlx5_0:1
+#            bandwidth: 2739.46/ppn + 0.00 MB/sec
+#      Transport: rc_verbs
+#         Device: mlx5_1:1
+#            bandwidth: 2739.46/ppn + 0.00 MB/sec
+#      Transport: rc_mlx5
+#         Device: mlx5_1:1
+#            bandwidth: 2739.46/ppn + 0.00 MB/sec
+#      Transport: dc_mlx5
+#         Device: mlx5_1:1
+#            bandwidth: 2739.46/ppn + 0.00 MB/sec
+#      Transport: ud_verbs
+#         Device: mlx5_1:1
+#            bandwidth: 2739.46/ppn + 0.00 MB/sec
+#      Transport: ud_mlx5
+#         Device: mlx5_1:1
+#            bandwidth: 2739.46/ppn + 0.00 MB/sec
+#      Transport: cma
+#         Device: memory
+#            bandwidth: 0.00/ppn + 11145.00 MB/sec

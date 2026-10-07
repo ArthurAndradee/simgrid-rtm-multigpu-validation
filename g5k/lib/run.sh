@@ -109,7 +109,34 @@ ${timeout_prefix}nix develop --command bash -c '
     -x PATH -x LD_LIBRARY_PATH -x RST_BUFFER_SIZE $ucx_fwd \\
     ./bin/dc ${RUN_APP_ARGS[*]} 2>&1 | tee dc.output
   if ls rastro-*.rst >/dev/null 2>&1; then
-    aky_converter rastro-*.rst > dc.trace
+    # Poll for all $RUN_NP rastro-*.rst files to become visible on the head
+    # node before converting. mpirun returning only means every rank called
+    # MPI_Finalize; it does not guarantee an NFS-mounted PROJECT_DIR has
+    # propagated close-to-open visibility of files a REMOTE rank just wrote
+    # to the head node ls glob run immediately after -- observed empirically
+    # as an intermittent "found N rastro-*.rst, expected \$RUN_NP" integrity
+    # failure (checkpoint.sh), more frequent with more physical nodes
+    # involved (more chances for one remote write to lag). 15s cap: this is
+    # a real, working NFS mount under normal load, so any genuine
+    # completeness gap resolves in well under a second in practice; the cap
+    # only bounds the pathological case, after which we fall through and
+    # let the existing rastro-count integrity check catch it as before.
+    for _ in \$(seq 1 30); do
+      [ \$(ls rastro-*.rst 2>/dev/null | wc -l) -ge $RUN_NP ] && break
+      sleep 0.5
+    done
+    # -l/--no-links: skip converting point-to-point LINK events. Real,
+    # independent per-machine clocks across distinct physical hosts
+    # occasionally record a send/receive pair with an apparent causality
+    # inversion from clock skew, which aky_converter cannot correct without
+    # a rastro_timesync sync file (not packaged here) -- this is exactly
+    # where that skew-triggered mismatch lives. The fidelity/checkpoint
+    # pipeline only reads State rows (MPI_Irecv/MPI_Waitall), never Link
+    # rows, so -l loses nothing used. Same root cause and fix as the
+    # reduced-N runs of simgrid-chuc-validation (LEVEL2_FINDINGS.md sec 6.6), confirmed here
+    # 2026-09-03 against cross-node strong-scaling runs (job
+    # 2199346/2199465).
+    aky_converter -l rastro-*.rst > dc.trace
     pj_dump -z -l 9 dc.trace | grep ^State > dc.csv || true
   fi
 '

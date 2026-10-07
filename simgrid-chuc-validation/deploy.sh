@@ -5,7 +5,7 @@
 # ranks run in one process on one machine) and writes into g5k/state/
 # (nodes.txt, kavlan_ips.txt, current_shaping.txt), which is the real
 # campaign's shared state -- reusing it here would risk exactly the
-# cross-contamination the user asked to avoid. Everything this script
+# cross-contamination this setup must avoid. Everything this script
 # touches lives under simgrid-chuc-validation/state/ instead.
 #
 # Usage: from the frontend, inside the OAR job (OAR_JOB_ID and
@@ -31,7 +31,7 @@ echo "=== Verifying SSH as root on every node ==="
 # ssh -n (or </dev/null): without it, ssh inherits the while-loop's stdin
 # (the nodes.txt file itself), and since ssh connects the remote command's
 # stdin to that fd by default, it consumes the loop's remaining lines --
-# every node after the first silently never gets checked. [EMP] found
+# every node after the first silently never gets checked. Found
 # 2026-08-12, job 2186228: chuc-7 never printed a line here even though the
 # deploy itself succeeded on both nodes.
 while read -r h; do

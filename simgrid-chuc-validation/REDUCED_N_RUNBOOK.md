@@ -1,6 +1,6 @@
 # Reduced-N runbook — 3-node and 4-node Level 1, real A100 reference (2026-08-14)
 
-Plan agreed with the user 2026-08-13/14: replace the hardware-mismatched
+Plan agreed on 2026-08-13/14: replace the hardware-mismatched
 chicoree/H200 3-4 node numbers with same-hardware (A100) results, at a
 REDUCED anchor size that fits real GPU VRAM, PLUS a genuinely new real
 (non-simulated) reference run at that same N for a valid comparison.

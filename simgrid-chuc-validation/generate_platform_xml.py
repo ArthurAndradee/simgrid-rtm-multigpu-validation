@@ -55,6 +55,14 @@ def main():
     intra_lat = env_or("PLATFORM_INTRA_LAT", "0.1us")
     hostfile_path = require_env("PLATFORM_HOSTFILE")
     xml_out = env_or("PLATFORM_XML_OUT", "platform_shared_nic.xml")
+    # NIC link sharing policy. SHARED (SimGrid's default, and what every run
+    # before 2026-10-02 used): send and receive traffic of a node share one
+    # net_bw budget. SPLITDUPLEX: each direction has its own net_bw.
+    # Selectable so both can be run on the same configs.
+    nic_sharing = env_or("PLATFORM_NIC_SHARING", "SHARED").upper()
+    if nic_sharing not in ("SHARED", "SPLITDUPLEX"):
+        sys.stderr.write(f"Error: PLATFORM_NIC_SHARING must be SHARED or SPLITDUPLEX, got '{nic_sharing}'.\n")
+        sys.exit(1)
 
     total_hosts = num_nodes * ranks_per_node
 
@@ -63,6 +71,7 @@ def main():
     print(f"  ranks_per_node: {ranks_per_node}")
     print(f"  net_bw (shared, per node): {net_bw}")
     print(f"  net_lat: {net_lat}")
+    print(f"  nic_sharing: {nic_sharing}")
     print(f"  intra_bw (per rank, within node): {intra_bw}")
     print(f"  intra_lat: {intra_lat}")
     print(f"  hostfile_path: {hostfile_path}")
@@ -83,10 +92,22 @@ def main():
         node_switch = f"node_switch_{i}"
         node_link = f"node_link_{i}"
         routers.append(f'    <router id="{node_switch}"/>')
-        links.append(f'    <link id="{node_link}" bandwidth="{net_bw}" latency="{net_lat}"/>')
-        routes.append(f'    <route src="{node_switch}" dst="global_switch">')
-        routes.append(f'      <link_ctn id="{node_link}"/>')
-        routes.append("    </route>")
+        if nic_sharing == "SHARED":
+            links.append(f'    <link id="{node_link}" bandwidth="{net_bw}" latency="{net_lat}"/>')
+            routes.append(f'    <route src="{node_switch}" dst="global_switch">')
+            routes.append(f'      <link_ctn id="{node_link}"/>')
+            routes.append("    </route>")
+        else:
+            # Split link: outbound traffic uses the UP half, inbound the DOWN
+            # half, so the two directions are declared as separate,
+            # non-symmetrical routes.
+            links.append(f'    <link id="{node_link}" bandwidth="{net_bw}" latency="{net_lat}" sharing_policy="SPLITDUPLEX"/>')
+            routes.append(f'    <route src="{node_switch}" dst="global_switch" symmetrical="NO">')
+            routes.append(f'      <link_ctn id="{node_link}" direction="UP"/>')
+            routes.append("    </route>")
+            routes.append(f'    <route src="global_switch" dst="{node_switch}" symmetrical="NO">')
+            routes.append(f'      <link_ctn id="{node_link}" direction="DOWN"/>')
+            routes.append("    </route>")
 
         for j in range(ranks_per_node):
             rank = i * ranks_per_node + j

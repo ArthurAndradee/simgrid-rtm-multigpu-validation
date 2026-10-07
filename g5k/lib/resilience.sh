@@ -130,7 +130,7 @@ orphan_cleanup() {
   # (resumed=$(inflight_resume)) — a log() line here would corrupt that
   # capture exactly like the run_ground_truth_check bug found empirically
   # 2026-07-15 (see 02-orchestrator.sh). Never confirmed to have actually
-  # fired (no crash-resume occurred yet this session), but the same root
+  # fired (no crash-resume had occurred as of 2026-07-15), but the same root
   # cause applies, so fixed proactively rather than waiting to observe it.
   warn "orphan_cleanup: varredura concluída em $(node_count) nó(s) vivo(s)"
 }

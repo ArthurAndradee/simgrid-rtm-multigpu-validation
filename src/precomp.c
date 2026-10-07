@@ -14,7 +14,7 @@ dc_precomp_vars dc_compute_precomp_vars(size_t sx, size_t sy, size_t sz,
   // sx/sy/sz is the FULL global domain, not a per-rank partition) — the
   // wrapped/negative result was silently turning a legitimate allocation
   // into a garbage-sized malloc (or, in the "i < n" loops below, a no-op
-  // loop that never ran). [EMP] found 2026-07-20, job 2171858, chuc-1:
+  // loop that never ran). Found 2026-07-20, job 2171858, chuc-1:
   // ground truth for full_2x2x2_N1536 failed with "OOM: could not
   // allocate memory for vpz" — actual cause was 1528^3 = 3,567,549,952 >
   // INT32_MAX in the sibling function dc_compute_anisotropy_vars, not a
@@ -122,7 +122,7 @@ dc_precomp_vars dc_compute_precomp_vars(size_t sx, size_t sy, size_t sz,
 dc_anisotropy_t dc_compute_anisotropy_vars(size_t sx, size_t sy, size_t sz) {
   dc_anisotropy_t anisotropy;
   // size_t: see dc_compute_precomp_vars header comment above -- same
-  // int32-overflow bug, same fix, same [EMP] finding (2026-07-20).
+  // int32-overflow bug, same fix (2026-07-20).
   size_t n = sx * sy * sz;
   anisotropy.vpz = (float *)malloc(sizeof(float) * n);
   if (anisotropy.vpz == NULL) {

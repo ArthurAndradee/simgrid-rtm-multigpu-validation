@@ -35,7 +35,7 @@ deploy_run() {
   # far because dhclient happened to already be running in every session to
   # date (later IPv4 verification below would still catch a real miss as a
   # hard failure, just not self-heal it). Same bug class as lib/resilience.sh
-  # ([.]/bin/dc) and lib/validate.sh ([i]perf3 -s) — [EMP] found + fixed
+  # ([.]/bin/dc) and lib/validate.sh ([i]perf3 -s) — found and fixed
   # together 2026-07-17, job 2169626.
   all_nodes_script "
     set -e

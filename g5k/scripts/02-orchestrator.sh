@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # scripts/02-orchestrator.sh — reads experiments.csv and runs the campaign
-# in two decoupled phases (see design doc campaign_infrastructure_design.md,
+# in two decoupled phases (see design doc g5k/logs/campaign_infrastructure_design.md on main,
 # secao 5.0-quater — this is the FIXED premise of the project as of
 # 2026-07-15, not a placeholder):
 #
@@ -98,9 +98,9 @@ echo $$ > "$LOCK_FILE"
 # preflight smoke test (RUN_NATIVE=1 refuses to run under active shaping
 # — correct guard, wrong UX: it should self-heal, not require a manual
 # shape_off). shape_off's own ssh calls degrade gracefully on unreachable
-# nodes, and it is harmless when shaping is already off. [EMP] gap found
-# + fixed 2026-07-17, job 2169626, after hitting it 3 times in one
-# session.
+# nodes, and it is harmless when shaping is already off. Gap found and
+# fixed 2026-07-17, job 2169626, after hitting it 3 times in one
+# allocation.
 if [ "$DRY_RUN" -eq 0 ]; then
   trap 'rm -f "$LOCK_FILE"; shape_off >/dev/null 2>&1 || true' EXIT
 else
@@ -171,7 +171,7 @@ handle_run_failure() {
 
 # run_ground_truth_check <topologia> <n> <size_cli> <predicted_dc_path> <result_dir>
 # — builds (once, cached) an isolated OpenMP reference binary at
-# bin_openmp_gt/dc (Makefile's BUILDDIR override — [EMP] confirmed
+# bin_openmp_gt/dc (Makefile's BUILDDIR override — confirmed
 # 2026-07-15 this does NOT touch bin/dc, the campaign's CUDA binary),
 # runs it np=1 with the SAME physical parameters, and compares its output
 # against the full run's predicted.dc via CompareResults.R (tolerance

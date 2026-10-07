@@ -1,0 +1,230 @@
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/privatization' to 'ON'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/np' to '24'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/hostfile' to 'hostfile.txt'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing' to 'yes'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing/filename' to 'smpi_simgrid.trace'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing/smpi' to 'yes'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'precision/timing' to '1e-9'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'network/model' to 'SMPI'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/display-timing' to 'yes'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing/precision' to '9'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/shared-malloc' to 'local'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/shared-malloc-blocksize' to '1073741824'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/simulate-computation' to 'no'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/host-speed' to '1'
+[0.000000] ./src/xbt/xbt_parse_units.cpp:71: [parse/WARNING] Deprecated unit-less value '1' for option smpi/host-speed. Append 'f' or 'flops' to your speed to get flop per second
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/os' to '0:4.17e-07:9.3e-08;2:1.2688358242159313e-06:5.509165162627468e-11;846:1.2427927374751976e-06:7.629724927795766e-11;1182:1.01878039474522e-06:2.2976714190789488e-10;6687:7.212526152845653e-07:2.3548673558712826e-10;65480:0.0:0.0'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/or' to '0:1.074e-06:6.000000000000027e-09;2:1.0473771622457872e-06:1.5567156532620197e-10;846:1.2421788110402576e-06:7.174648137343064e-43;1182:1.6995035871937564e-06:1.348689114201127e-10;6687:1.758151339164401e-06:1.1446056239417835e-10;65480:0.0:0.0'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/ois' to '0:4.99e-07:6.2e-08;2:5.71513825856767e-07:3.681266485442063e-11;846:1.3753277297356838e-07:3.538717583470924e-10;1182:2.0886700989740583e-07:1.9666759173075344e-10;6687:2.938735877055719e-39:1.105170449896893e-10;65480:5.548287028763466e-07:1.5407086056396026e-13'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/bw-factor' to '0:1.0;2:0.4510053758462671;846:0.5091684623185814;1182:0.948984644166369;6687:0.9193943188688236;65480:0.9412414252627215'
+[0.000000] [xbt_cfg/INFO] Option smpi/bw-factor has been renamed to network/bandwidth-factor. Consider switching.
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/lat-factor' to '0:0.837740263193759;2:0.790246085987436;846:1.0647374762712742;1182:1.4653793019194907;6687:1.394904217619273;65480:4.25253968678777'
+[0.000000] [xbt_cfg/INFO] Option smpi/lat-factor has been renamed to network/latency-factor. Consider switching.
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/iprobe' to '1.6269591164444444e-07'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/test' to '1.4119688221333333e-07'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/async-small-thresh' to '65480'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/send-is-detached-thresh' to '65480'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing/filename' to 'dc.trace'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/tmpdir' to '/tmp'
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Distributing partition info to workers...
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Distributing partition info to 24 workers...
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Global sizes: 968 x 968 x 968
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Partition sizes: 480 x 80 x 960
+[INFO] chirop-3.lille.grid5000.fr - Worker 1: Awaiting partition info from coordinator...
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Sent partition info to worker 12
+[INFO] chirop-3.lille.grid5000.fr - Worker 2: Awaiting partition info from coordinator...
+[INFO] chirop-3.lille.grid5000.fr - Worker 3: Awaiting partition info from coordinator...
+[INFO] chirop-3.lille.grid5000.fr - Worker 4: Awaiting partition info from coordinator...
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Sent partition info to worker 1
+[INFO] chirop-3.lille.grid5000.fr - Worker 12: Awaiting partition info from coordinator...
+[INFO] chirop-3.lille.grid5000.fr - Worker 5: Awaiting partition info from coordinator...
+[INFO] chirop-3.lille.grid5000.fr - Worker 13: Awaiting partition info from coordinator...
+[INFO] chirop-3.lille.grid5000.fr - Worker 6: Awaiting partition info from coordinator...
+[INFO] chirop-3.lille.grid5000.fr - Worker 1: Received partition info: local 488x88x968, global 968x968x968
+[INFO] chirop-3.lille.grid5000.fr - Worker 1: Local initialization complete
+[INFO] chirop-3.lille.grid5000.fr - Worker 1: Local initialization complete.
+[INFO] chirop-3.lille.grid5000.fr - Worker 1: Starting worker process...
+[INFO] chirop-3.lille.grid5000.fr - Worker 1: Starting 100 iterations with sizes 488 88 968
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Sent partition info to worker 13
+[INFO] chirop-3.lille.grid5000.fr - Worker 14: Awaiting partition info from coordinator...
+[INFO] chirop-3.lille.grid5000.fr - Worker 7: Awaiting partition info from coordinator...
+[INFO] chirop-3.lille.grid5000.fr - Worker 15: Awaiting partition info from coordinator...
+[INFO] chirop-3.lille.grid5000.fr - Worker 8: Awaiting partition info from coordinator...
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Sent partition info to worker 2
+[INFO] chirop-3.lille.grid5000.fr - Worker 9: Awaiting partition info from coordinator...
+[INFO] chirop-3.lille.grid5000.fr - Worker 10: Awaiting partition info from coordinator...
+[INFO] chirop-3.lille.grid5000.fr - Worker 2: Received partition info: local 488x88x968, global 968x968x968
+[INFO] chirop-3.lille.grid5000.fr - Worker 2: Local initialization complete
+[INFO] chirop-3.lille.grid5000.fr - Worker 2: Local initialization complete.
+[INFO] chirop-3.lille.grid5000.fr - Worker 2: Starting worker process...
+[INFO] chirop-3.lille.grid5000.fr - Worker 2: Starting 100 iterations with sizes 488 88 968
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Sent partition info to worker 14
+[INFO] chirop-3.lille.grid5000.fr - Worker 11: Awaiting partition info from coordinator...
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Sent partition info to worker 3
+[INFO] chirop-3.lille.grid5000.fr - Worker 20: Awaiting partition info from coordinator...
+[INFO] chirop-3.lille.grid5000.fr - Worker 21: Awaiting partition info from coordinator...
+[INFO] chirop-3.lille.grid5000.fr - Worker 3: Received partition info: local 488x88x968, global 968x968x968
+[INFO] chirop-3.lille.grid5000.fr - Worker 3: Local initialization complete
+[INFO] chirop-3.lille.grid5000.fr - Worker 3: Local initialization complete.
+[INFO] chirop-3.lille.grid5000.fr - Worker 3: Starting worker process...
+[INFO] chirop-3.lille.grid5000.fr - Worker 3: Starting 100 iterations with sizes 488 88 968
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Sent partition info to worker 15
+[INFO] chirop-3.lille.grid5000.fr - Worker 16: Awaiting partition info from coordinator...
+[INFO] chirop-3.lille.grid5000.fr - Worker 22: Awaiting partition info from coordinator...
+[INFO] chirop-3.lille.grid5000.fr - Worker 17: Awaiting partition info from coordinator...
+[INFO] chirop-3.lille.grid5000.fr - Worker 23: Awaiting partition info from coordinator...
+[INFO] chirop-3.lille.grid5000.fr - Worker 18: Awaiting partition info from coordinator...
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Sent partition info to worker 4
+[INFO] chirop-3.lille.grid5000.fr - Worker 19: Awaiting partition info from coordinator...
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Sent partition info to worker 16
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Worker 5 will handle source at local index 20826372
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Sent partition info to worker 5
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Worker 17 will handle source at local index 20825892
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Sent partition info to worker 17
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Worker 6 will handle source at local index 20787332
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Sent partition info to worker 6
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Worker 18 will handle source at local index 20786852
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Sent partition info to worker 18
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Sent partition info to worker 7
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Sent partition info to worker 19
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Sent partition info to worker 8
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Sent partition info to worker 20
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Sent partition info to worker 9
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Sent partition info to worker 21
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Sent partition info to worker 10
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Sent partition info to worker 22
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Sent partition info to worker 11
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Sent partition info to worker 23
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Coordinator initialized locally with sizes 488 x 88 x 968
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Starting worker process...
+[INFO] chirop-3.lille.grid5000.fr - Coordinator: Starting 100 iterations with sizes 488 88 968
+[INFO] chirop-3.lille.grid5000.fr - Worker 12: Received partition info: local 488x88x968, global 968x968x968
+[INFO] chirop-3.lille.grid5000.fr - Worker 12: Local initialization complete
+[INFO] chirop-3.lille.grid5000.fr - Worker 12: Local initialization complete.
+[INFO] chirop-3.lille.grid5000.fr - Worker 12: Starting worker process...
+[INFO] chirop-3.lille.grid5000.fr - Worker 12: Starting 100 iterations with sizes 488 88 968
+[INFO] chirop-3.lille.grid5000.fr - Worker 13: Received partition info: local 488x88x968, global 968x968x968
+[INFO] chirop-3.lille.grid5000.fr - Worker 13: Local initialization complete
+[INFO] chirop-3.lille.grid5000.fr - Worker 13: Local initialization complete.
+[INFO] chirop-3.lille.grid5000.fr - Worker 13: Starting worker process...
+[INFO] chirop-3.lille.grid5000.fr - Worker 13: Starting 100 iterations with sizes 488 88 968
+[INFO] chirop-3.lille.grid5000.fr - Worker 14: Received partition info: local 488x88x968, global 968x968x968
+[INFO] chirop-3.lille.grid5000.fr - Worker 14: Local initialization complete
+[INFO] chirop-3.lille.grid5000.fr - Worker 14: Local initialization complete.
+[INFO] chirop-3.lille.grid5000.fr - Worker 14: Starting worker process...
+[INFO] chirop-3.lille.grid5000.fr - Worker 14: Starting 100 iterations with sizes 488 88 968
+[INFO] chirop-3.lille.grid5000.fr - Worker 15: Received partition info: local 488x88x968, global 968x968x968
+[INFO] chirop-3.lille.grid5000.fr - Worker 15: Local initialization complete
+[INFO] chirop-3.lille.grid5000.fr - Worker 15: Local initialization complete.
+[INFO] chirop-3.lille.grid5000.fr - Worker 15: Starting worker process...
+[INFO] chirop-3.lille.grid5000.fr - Worker 15: Starting 100 iterations with sizes 488 88 968
+[INFO] chirop-3.lille.grid5000.fr - Worker 4: Received partition info: local 488x88x968, global 968x968x968
+[INFO] chirop-3.lille.grid5000.fr - Worker 4: Local initialization complete
+[INFO] chirop-3.lille.grid5000.fr - Worker 4: Local initialization complete.
+[INFO] chirop-3.lille.grid5000.fr - Worker 4: Starting worker process...
+[INFO] chirop-3.lille.grid5000.fr - Worker 4: Starting 100 iterations with sizes 488 88 968
+[INFO] chirop-3.lille.grid5000.fr - Worker 16: Received partition info: local 488x88x968, global 968x968x968
+[INFO] chirop-3.lille.grid5000.fr - Worker 16: Local initialization complete
+[INFO] chirop-3.lille.grid5000.fr - Worker 16: Local initialization complete.
+[INFO] chirop-3.lille.grid5000.fr - Worker 16: Starting worker process...
+[INFO] chirop-3.lille.grid5000.fr - Worker 16: Starting 100 iterations with sizes 488 88 968
+[INFO] chirop-3.lille.grid5000.fr - Worker 5: Received partition info: local 488x88x968, global 968x968x968
+[INFO] chirop-3.lille.grid5000.fr - Worker 5: Local initialization complete
+[INFO] chirop-3.lille.grid5000.fr - Worker 5: Local initialization complete.
+[INFO] chirop-3.lille.grid5000.fr - Worker 5: Starting worker process...
+[INFO] chirop-3.lille.grid5000.fr - Worker 5: Starting 100 iterations with sizes 488 88 968
+[INFO] chirop-3.lille.grid5000.fr - Worker 17: Received partition info: local 488x88x968, global 968x968x968
+[INFO] chirop-3.lille.grid5000.fr - Worker 17: Local initialization complete
+[INFO] chirop-3.lille.grid5000.fr - Worker 17: Local initialization complete.
+[INFO] chirop-3.lille.grid5000.fr - Worker 17: Starting worker process...
+[INFO] chirop-3.lille.grid5000.fr - Worker 17: Starting 100 iterations with sizes 488 88 968
+[INFO] chirop-3.lille.grid5000.fr - Worker 6: Received partition info: local 488x88x968, global 968x968x968
+[INFO] chirop-3.lille.grid5000.fr - Worker 6: Local initialization complete
+[INFO] chirop-3.lille.grid5000.fr - Worker 6: Local initialization complete.
+[INFO] chirop-3.lille.grid5000.fr - Worker 6: Starting worker process...
+[INFO] chirop-3.lille.grid5000.fr - Worker 6: Starting 100 iterations with sizes 488 88 968
+[INFO] chirop-3.lille.grid5000.fr - Worker 18: Received partition info: local 488x88x968, global 968x968x968
+[INFO] chirop-3.lille.grid5000.fr - Worker 18: Local initialization complete
+[INFO] chirop-3.lille.grid5000.fr - Worker 18: Local initialization complete.
+[INFO] chirop-3.lille.grid5000.fr - Worker 18: Starting worker process...
+[INFO] chirop-3.lille.grid5000.fr - Worker 18: Starting 100 iterations with sizes 488 88 968
+[INFO] chirop-3.lille.grid5000.fr - Worker 7: Received partition info: local 488x88x968, global 968x968x968
+[INFO] chirop-3.lille.grid5000.fr - Worker 7: Local initialization complete
+[INFO] chirop-3.lille.grid5000.fr - Worker 7: Local initialization complete.
+[INFO] chirop-3.lille.grid5000.fr - Worker 7: Starting worker process...
+[INFO] chirop-3.lille.grid5000.fr - Worker 7: Starting 100 iterations with sizes 488 88 968
+[INFO] chirop-3.lille.grid5000.fr - Worker 19: Received partition info: local 488x88x968, global 968x968x968
+[INFO] chirop-3.lille.grid5000.fr - Worker 19: Local initialization complete
+[INFO] chirop-3.lille.grid5000.fr - Worker 19: Local initialization complete.
+[INFO] chirop-3.lille.grid5000.fr - Worker 19: Starting worker process...
+[INFO] chirop-3.lille.grid5000.fr - Worker 19: Starting 100 iterations with sizes 488 88 968
+[INFO] chirop-3.lille.grid5000.fr - Worker 8: Received partition info: local 488x88x968, global 968x968x968
+[INFO] chirop-3.lille.grid5000.fr - Worker 8: Local initialization complete
+[INFO] chirop-3.lille.grid5000.fr - Worker 8: Local initialization complete.
+[INFO] chirop-3.lille.grid5000.fr - Worker 8: Starting worker process...
+[INFO] chirop-3.lille.grid5000.fr - Worker 8: Starting 100 iterations with sizes 488 88 968
+[INFO] chirop-3.lille.grid5000.fr - Worker 20: Received partition info: local 488x88x968, global 968x968x968
+[INFO] chirop-3.lille.grid5000.fr - Worker 20: Local initialization complete
+[INFO] chirop-3.lille.grid5000.fr - Worker 20: Local initialization complete.
+[INFO] chirop-3.lille.grid5000.fr - Worker 20: Starting worker process...
+[INFO] chirop-3.lille.grid5000.fr - Worker 20: Starting 100 iterations with sizes 488 88 968
+[INFO] chirop-3.lille.grid5000.fr - Worker 9: Received partition info: local 488x88x968, global 968x968x968
+[INFO] chirop-3.lille.grid5000.fr - Worker 9: Local initialization complete
+[INFO] chirop-3.lille.grid5000.fr - Worker 9: Local initialization complete.
+[INFO] chirop-3.lille.grid5000.fr - Worker 9: Starting worker process...
+[INFO] chirop-3.lille.grid5000.fr - Worker 9: Starting 100 iterations with sizes 488 88 968
+[INFO] chirop-3.lille.grid5000.fr - Worker 21: Received partition info: local 488x88x968, global 968x968x968
+[INFO] chirop-3.lille.grid5000.fr - Worker 21: Local initialization complete
+[INFO] chirop-3.lille.grid5000.fr - Worker 21: Local initialization complete.
+[INFO] chirop-3.lille.grid5000.fr - Worker 21: Starting worker process...
+[INFO] chirop-3.lille.grid5000.fr - Worker 21: Starting 100 iterations with sizes 488 88 968
+[INFO] chirop-3.lille.grid5000.fr - Worker 10: Received partition info: local 488x88x968, global 968x968x968
+[INFO] chirop-3.lille.grid5000.fr - Worker 10: Local initialization complete
+[INFO] chirop-3.lille.grid5000.fr - Worker 10: Local initialization complete.
+[INFO] chirop-3.lille.grid5000.fr - Worker 10: Starting worker process...
+[INFO] chirop-3.lille.grid5000.fr - Worker 10: Starting 100 iterations with sizes 488 88 968
+[INFO] chirop-3.lille.grid5000.fr - Worker 22: Received partition info: local 488x88x968, global 968x968x968
+[INFO] chirop-3.lille.grid5000.fr - Worker 22: Local initialization complete
+[INFO] chirop-3.lille.grid5000.fr - Worker 22: Local initialization complete.
+[INFO] chirop-3.lille.grid5000.fr - Worker 22: Starting worker process...
+[INFO] chirop-3.lille.grid5000.fr - Worker 22: Starting 100 iterations with sizes 488 88 968
+[INFO] chirop-3.lille.grid5000.fr - Worker 11: Received partition info: local 488x88x968, global 968x968x968
+[INFO] chirop-3.lille.grid5000.fr - Worker 11: Local initialization complete
+[INFO] chirop-3.lille.grid5000.fr - Worker 11: Local initialization complete.
+[INFO] chirop-3.lille.grid5000.fr - Worker 11: Starting worker process...
+[INFO] chirop-3.lille.grid5000.fr - Worker 11: Starting 100 iterations with sizes 488 88 968
+[INFO] chirop-3.lille.grid5000.fr - Worker 23: Received partition info: local 488x88x968, global 968x968x968
+[INFO] chirop-3.lille.grid5000.fr - Worker 23: Local initialization complete
+[INFO] chirop-3.lille.grid5000.fr - Worker 23: Local initialization complete.
+[INFO] chirop-3.lille.grid5000.fr - Worker 23: Starting worker process...
+[INFO] chirop-3.lille.grid5000.fr - Worker 23: Starting 100 iterations with sizes 488 88 968
+rank,total_time,msamples_per_s
+0,5.261672,700.613736
+*,5.261672,16814.729605
+3,5.333010,691.241960
+2,5.309724,694.273336
+1,5.285931,697.398406
+23,5.266550,699.964812
+22,5.292602,696.519379
+21,5.312270,693.940656
+20,5.332691,691.283297
+19,5.331289,691.465011
+18,5.309917,694.248111
+17,5.310697,694.146152
+16,5.331291,691.464814
+15,5.330869,691.519539
+14,5.309400,694.315738
+13,5.286332,697.345536
+12,5.261693,700.610965
+11,5.266559,699.963629
+10,5.290829,696.752802
+9,5.311241,694.075091
+8,5.333933,691.122333
+7,5.333427,691.187897
+6,5.309819,694.260994
+5,5.310090,694.225546
+4,5.332389,691.322430
+[5.334187] [smpi_utils/INFO] Simulated time: 5.33419 seconds. 
+
+The simulation took 50.7021 seconds (after parsing and platform setup)
+35.9143 seconds were actual computation of the application

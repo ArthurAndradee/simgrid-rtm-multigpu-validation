@@ -79,7 +79,7 @@ SMPI_CFG_COMMON=(
   # UPDATE 2026-08-13 (fresh chuc-7/chuc-8 allocation, CUDA 12.8 / SimGrid
   # 4.0 via the flake devShell): the dlopen bug documented below did NOT
   # reproduce at all in this environment -- both the minimal repro
-  # (dlopen_repro/) and the real bin/dc got past SMPI privatization/loading
+  # (dlopen_repro/ on main) and the real bin/dc got past SMPI privatization/loading
   # cleanly with the default --cfg=smpi/privatization:ON. Root cause of the
   # original bug still unconfirmed (plausibly a CUDA/SimGrid/driver version
   # combination specific to the old build), but since it's absent here, the

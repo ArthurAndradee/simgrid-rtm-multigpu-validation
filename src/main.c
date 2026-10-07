@@ -29,6 +29,10 @@ static struct argp_option options[] = {
      "Benchmark mode: skip gather and result writing (both occur after the "
      "measured window; timing/tracing are unaffected). --output-file is not "
      "required when this is set."},
+    {"topology", 135, "PX,PY,PZ", 0,
+     "Explicit MPI Cartesian process grid (product must equal the number of "
+     "ranks). Omit to keep the default: MPI_Dims_create picks a balanced "
+     "grid automatically (unchanged behaviour when this flag is absent)."},
     {0},
 };
 
@@ -68,6 +72,20 @@ static error_t parse_opt(int key, char *arg, struct argp_state *state) {
   case 'b':
     arguments->skip_output = 1;
     break;
+  case 135: {
+    int px, py, pz;
+    if (sscanf(arg, "%d,%d,%d", &px, &py, &pz) != 3 || px < 1 || py < 1 ||
+        pz < 1) {
+      argp_error(state,
+                 "--topology expects PX,PY,PZ as three positive integers "
+                 "(got '%s')",
+                 arg);
+    }
+    arguments->topology[0] = px;
+    arguments->topology[1] = py;
+    arguments->topology[2] = pz;
+    break;
+  }
   case ARGP_KEY_END:
     if (arguments->size_x == 0 || arguments->size_y == 0 ||
         arguments->size_z == 0 || arguments->dx == 0 || arguments->dy == 0 ||
@@ -92,9 +110,24 @@ int main(int argc, char **argv) {
   dc_arguments_t arguments = {0};
   argp_parse(&argp, argc, argv, 0, 0, &arguments);
   MPI_Comm communicator;
-  int topology[DIMENSIONS] = {0};
+  int topology[DIMENSIONS];
+  memcpy(topology, arguments.topology, sizeof(topology));
   int rank, size;
   MPI_Comm_size(MPI_COMM_WORLD, &size);
+  if (topology[0] != 0) {
+    /* --topology was given: MPI_Dims_create (MPI 7.5.2) never modifies
+     * non-zero entries, so this call is a pure validation no-op below --
+     * but we check the product ourselves first for a clear error instead
+     * of an opaque MPI abort. */
+    long product = (long)topology[0] * topology[1] * topology[2];
+    if (product != size) {
+      fprintf(stderr,
+              "--topology %dx%dx%d (product=%ld) does not match the "
+              "process count (%d)\n",
+              topology[0], topology[1], topology[2], product, size);
+      MPI_Abort(MPI_COMM_WORLD, 1);
+    }
+  }
   MPI_Dims_create(size, DIMENSIONS, topology);
   dc_mpi_world_init(&communicator, topology);
   MPI_Comm_rank(communicator, &rank);
@@ -150,8 +183,8 @@ int main(int argc, char **argv) {
       // N=1536 that's 1524^3 > INT32_MAX, so the old (int) cast wrapped
       // to a wrong (possibly negative) index and would have injected the
       // source term at the wrong location, or skipped it if it happened
-      // to alias -1. [EMP] found by code audit 2026-07-20, same session
-      // as the sibling precomp.c/boundary.c overflow fixes.
+      // to alias -1. Found by code audit 2026-07-20, together
+      // with the sibling precomp.c/boundary.c overflow fixes.
       mpi_process.source_index = (long)dc_get_index_for_coordinates(
           source_x, source_y, source_z, mpi_process.sizes[0],
           mpi_process.sizes[1], mpi_process.sizes[2]);

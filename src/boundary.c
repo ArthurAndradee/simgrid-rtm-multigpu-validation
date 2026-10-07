@@ -50,7 +50,7 @@ void randomVelocityBoundaryPartition(int local_sx, int local_sy, int local_sz,
             // sibling precomp.c bug fixed alongside this one: that one
             // failed loudly (OOM), this one would have corrupted the
             // ground-truth reference data without any visible error.
-            // [EMP] found by code audit 2026-07-20, same session/job as
+            // Found by code audit 2026-07-20, together with
             // the precomp.c fix, before this path was ever exercised to
             // completion — not confirmed to have produced bad data in
             // practice, but the read of the code leaves no doubt it would

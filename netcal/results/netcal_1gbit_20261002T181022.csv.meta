@@ -1,0 +1,6 @@
+condition=1gbit
+nodes=chuc-2.lille.grid5000.fr,chuc-3.lille.grid5000.fr
+budget_s=150
+date=2026-10-02T18:13:12+02:00
+oar_job=2216790
+shaping=1gbit 

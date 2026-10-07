@@ -1,0 +1,5 @@
+nodes: 3 N: 1920 band: 10Gbps nic_sharing: SHARED
+calibration: /home/aandrade/ic/io-research/distributed-cube-average/simgrid-chuc-validation/calibrations/poti_cornebize.cfg net_lat: 22.7us
+compute: /home/aandrade/ic/io-research/distributed-cube-average/analysis/level2_compute_constants.csv (per node count, paper Level 2)
+simgrid: SimGrid version 4.0
+timestamp: 2026-10-02T19:55:59+02:00
